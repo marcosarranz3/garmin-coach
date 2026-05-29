@@ -42,25 +42,20 @@ INFORMES_DIR   = Path.home() / "Desktop" / "garmin_informes"
 
 def login():
     from garminconnect import Garmin
-    import garth
 
     email    = GARMIN_EMAIL    or input("Email de Garmin Connect: ").strip()
     password = GARMIN_PASSWORD or __import__("getpass").getpass("Contraseña: ")
 
-    client = Garmin(email, password)
+    if not email or not password:
+        print("Error: GARMIN_EMAIL y GARMIN_PASSWORD son obligatorios")
+        sys.exit(1)
 
-    if SESSION_FILE.exists():
-        try:
-            client.login(str(SESSION_FILE))
-            print("✓ Sesión restaurada")
-            return client
-        except Exception:
-            print("Sesión expirada, iniciando sesión nueva...")
+    print(f"Iniciando sesión con {email}...")
+    client = Garmin(email, password)
 
     try:
         client.login()
-        client.garth.dump(str(SESSION_FILE))
-        print("✓ Sesión iniciada y guardada")
+        print("✓ Sesión iniciada correctamente")
     except Exception as e:
         print(f"Error al iniciar sesión: {e}")
         sys.exit(1)
