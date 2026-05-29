@@ -1,0 +1,29 @@
+name: Coach Garmin Diario
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 8h UTC = 10h Madrid (hora de verano)
+  workflow_dispatch:       # permite ejecutarlo manualmente también
+
+jobs:
+  garmin-coach:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install garminconnect
+
+      - name: Ejecutar script
+        env:
+          GARMIN_EMAIL:    ${{ secrets.GARMIN_EMAIL }}
+          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python garmin_coach.py
