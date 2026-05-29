@@ -2,12 +2,14 @@ name: Coach Garmin Diario
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # 8h UTC = 10h Madrid (hora de verano)
-  workflow_dispatch:       # permite ejecutarlo manualmente también
+    - cron: '0 8 * * *'   # Marcos: 8h UTC = 10h Madrid
+    - cron: '0 7 * * *'   # Ana: 7h UTC = 9h Madrid
+  workflow_dispatch:
 
 jobs:
-  garmin-coach:
+  garmin-marcos:
     runs-on: ubuntu-latest
+    if: github.event.schedule == '0 8 * * *' || github.event_name == 'workflow_dispatch'
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -23,11 +25,36 @@ jobs:
       - name: Instalar dependencias
         run: pip install garminconnect
 
-      - name: Ejecutar script
+      - name: Ejecutar script - Marcos
         env:
           GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL }}
           GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: |
-          echo "Email configurado: ${{ secrets.GARMIN_EMAIL != '' }}"
-          python garmin_coach.py
+          GMAIL_TO_OVERRIDE: ${{ secrets.GMAIL_TO }}
+        run: python garmin_coach.py
+
+  garmin-ana:
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 7 * * *' || github.event_name == 'workflow_dispatch'
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4.2.2
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5.3.0
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install garminconnect
+
+      - name: Ejecutar script - Ana
+        env:
+          GARMIN_EMAIL: ${{ secrets.GARMIN_EMAIL_2 }}
+          GARMIN_PASSWORD: ${{ secrets.GARMIN_PASSWORD_2 }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_TO_OVERRIDE: ${{ secrets.GMAIL_TO_2 }}
+        run: python garmin_coach.py
