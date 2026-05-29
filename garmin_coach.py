@@ -32,7 +32,7 @@ GARMIN_PASSWORD  = os.environ.get("GARMIN_PASSWORD", "")
 # Necesitas una "Contraseña de aplicación" de Google (no tu contraseña normal).
 # Cómo obtenerla: myaccount.google.com/apppasswords
 GMAIL_SENDER   = "marcosarranz96@gmail.com"
-GMAIL_APP_PASS = ""  # Rellena con tu contraseña de aplicación de Google
+GMAIL_APP_PASS = os.environ.get("GMAIL_APP_PASSWORD", "")
 GMAIL_TO       = "marcosarranz96@gmail.com"
 # ─────────────────────────────────────────────────────────────────────────────
 
