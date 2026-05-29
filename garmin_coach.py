@@ -37,7 +37,11 @@ GMAIL_TO       = "marcosarranz96@gmail.com"
 # ─────────────────────────────────────────────────────────────────────────────
 
 SESSION_FILE   = Path.home() / ".garmin_session"
-OUTPUT_FILE    = Path.home() / "Desktop" / "garmin_hoy.json"
+IS_CLOUD     = os.environ.get("GITHUB_ACTIONS") == "true"
+BASE_DIR     = Path("/home/runner/Desktop") if IS_CLOUD else Path.home() / "Desktop"
+OUTPUT_DIR   = BASE_DIR / "garmin_informes"
+OUTPUT_JSON  = BASE_DIR / "garmin_hoy.json"
+OUTPUT_RESUMEN = BASE_DIR / "garmin_resumen.txt"
 INFORMES_DIR   = Path.home() / "Desktop" / "garmin_informes"
 
 def login():
@@ -363,32 +367,45 @@ Generado automáticamente por tu coach Garmin · {today.isoformat()}
 def main():
     today     = datetime.date.today()
     yesterday = today - datetime.timedelta(days=1)
+    date_str  = today.strftime("%Y-%m-%d")
 
     client = login()
     data   = fetch_all(client, today, yesterday)
 
+    # Crear carpeta de informes
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
     # Guardar JSON completo
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2, default=str)
 
     # Generar resumen
     summary = build_summary(data, today)
-    summary_file = OUTPUT_FILE.parent / "garmin_resumen.txt"
-    with open(summary_file, "w", encoding="utf-8") as f:
+
+    # Guardar informe fechado
+    dated_file = OUTPUT_DIR / f"{date_str}.txt"
+    with open(dated_file, "w", encoding="utf-8") as f:
         f.write(summary)
 
-    # Copiar al portapapeles
+    # Guardar resumen del dia (el mas reciente)
+    with open(OUTPUT_RESUMEN, "w", encoding="utf-8") as f:
+        f.write(summary)
+
+    # Copiar al portapapeles (solo en Mac)
     try:
         import subprocess
         subprocess.run("pbcopy", input=summary.encode("utf-8"), check=True)
         print("\n✅ ¡Listo! Resumen copiado al portapapeles.")
-        print("   Abre claude.ai y pega con Cmd+V para hablar con tu coach.")
     except Exception:
         print("\n✅ ¡Listo!")
 
-    print(f"\n📄 JSON completo guardado en: {OUTPUT_FILE}")
-    print(f"📝 Resumen guardado en:       {summary_file}")
+    print(f"\n📄 JSON completo:   {OUTPUT_JSON}")
+    print(f"📝 Informe fechado: {dated_file}")
+    print(f"📝 Resumen hoy:     {OUTPUT_RESUMEN}")
+
+    # Enviar email
+    send_email(summary, today, OUTPUT_JSON)
+
     print("\n--- RESUMEN ---")
     print(summary)
 
