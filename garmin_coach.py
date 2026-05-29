@@ -43,8 +43,22 @@ INFORMES_DIR   = Path.home() / "Desktop" / "garmin_informes"
 def login():
     from garminconnect import Garmin
 
-    email    = GARMIN_EMAIL    or input("Email de Garmin Connect: ").strip()
-    password = GARMIN_PASSWORD or __import__("getpass").getpass("Contraseña: ")
+    email    = GARMIN_EMAIL
+    password = GARMIN_PASSWORD
+
+    # Solo pedir por pantalla si no vienen de variables de entorno
+    if not email:
+        try:
+            email = input("Email de Garmin Connect: ").strip()
+        except EOFError:
+            print("Error: variable GARMIN_EMAIL no configurada")
+            sys.exit(1)
+    if not password:
+        try:
+            password = __import__("getpass").getpass("Contraseña: ")
+        except EOFError:
+            print("Error: variable GARMIN_PASSWORD no configurada")
+            sys.exit(1)
 
     if not email or not password:
         print("Error: GARMIN_EMAIL y GARMIN_PASSWORD son obligatorios")
