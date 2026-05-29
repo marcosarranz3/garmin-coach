@@ -45,7 +45,7 @@ def login():
     import garth
 
     email    = GARMIN_EMAIL    or input("Email de Garmin Connect: ").strip()
-    password = GARMIN_PASSWORD or __import__('getpass').getpass("Contraseña: ")
+    password = GARMIN_PASSWORD or __import__("getpass").getpass("Contraseña: ")
 
     client = Garmin(email, password)
 
