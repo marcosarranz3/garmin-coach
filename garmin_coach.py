@@ -34,6 +34,8 @@ GARMIN_PASSWORD  = os.environ.get("GARMIN_PASSWORD", "")
 GMAIL_SENDER   = "marcosarranz96@gmail.com"
 GMAIL_APP_PASS = os.environ.get("GMAIL_APP_PASSWORD", "")
 GMAIL_TO = os.environ.get("GMAIL_TO_OVERRIDE", "marcosarranz96@gmail.com")
+GH_TOKEN = os.environ.get("GH_TOKEN_PUSH", "")
+GH_REPO  = os.environ.get("GITHUB_REPOSITORY", "")
 # ─────────────────────────────────────────────────────────────────────────────
 
 SESSION_FILE   = Path.home() / ".garmin_session"
@@ -323,6 +325,56 @@ def build_summary(data, today):
     return "\n".join(lines)
 
 
+
+def upload_to_github(json_file, date_str):
+    """Sube el JSON de hoy a GitHub para que la app lo lea."""
+    if not GH_TOKEN or not GH_REPO:
+        print("  Github upload: GH_TOKEN o GH_REPO no configurados, saltando.")
+        return
+    try:
+        import urllib.request
+        import base64
+
+        with open(json_file, 'rb') as f:
+            content_b64 = base64.b64encode(f.read()).decode()
+
+        # filename and SHA will be set below after determining user
+
+        # Filename based on user email
+        email_user = os.environ.get("GARMIN_EMAIL", "user")
+        fname = "garmin_marcos.json" if "marcosarranz" in email_user else "garmin_ana.json"
+        api_url = f"https://api.github.com/repos/{GH_REPO}/contents/{fname}"
+
+        # Re-check SHA for correct filename
+        sha = None
+        try:
+            req2 = urllib.request.Request(api_url, headers={
+                "Authorization": f"token {GH_TOKEN}",
+                "Accept": "application/vnd.github.v3+json"
+            })
+            with urllib.request.urlopen(req2) as r2:
+                sha = json.loads(r2.read())["sha"]
+        except Exception:
+            pass
+
+        payload = {
+            "message": f"datos garmin {date_str} - {fname}",
+            "content": content_b64,
+        }
+        if sha:
+            payload["sha"] = sha
+
+        data = json.dumps(payload).encode()
+        req = urllib.request.Request(api_url, data=data, method="PUT", headers={
+            "Authorization": f"token {GH_TOKEN}",
+            "Accept": "application/vnd.github.v3+json",
+            "Content-Type": "application/json"
+        })
+        with urllib.request.urlopen(req) as r:
+            print(f"✅ JSON subido a GitHub")
+    except Exception as e:
+        print(f"  Error subiendo a GitHub: {e}")
+
 def send_email(summary, today, json_file):
     if not GMAIL_APP_PASS:
         print("⚠️  Email no configurado. Añade GMAIL_APP_PASSWORD como secreto en GitHub.")
@@ -402,6 +454,9 @@ def main():
     print(f"\n📄 JSON completo:   {OUTPUT_JSON}")
     print(f"📝 Informe fechado: {dated_file}")
     print(f"📝 Resumen hoy:     {OUTPUT_RESUMEN}")
+
+    # Subir JSON a GitHub para la app
+    upload_to_github(OUTPUT_JSON, date_str)
 
     # Enviar email
     send_email(summary, today, OUTPUT_JSON)
