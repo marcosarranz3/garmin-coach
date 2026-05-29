@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Coach · Marcos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --orange: #FF4500;
+      --orange2: #FF6B35;
+      --bg: #080808;
+      --bg2: #111;
+      --bg3: #1a1a1a;
+      --border: rgba(255,255,255,0.06);
+      --text: #f0ede8;
+      --muted: #666;
+      --green: #39FF14;
+      --yellow: #FFD700;
+      --red: #FF3B3B;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overscroll-behavior: none; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* noise overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      padding: 16px 20px 12px;
+      background: rgba(8,8,8,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px; letter-spacing: 0.05em;
+      color: var(--text);
+    }
+    .logo span { color: var(--orange); }
+    .live-pill {
+      display: flex; align-items: center; gap: 6px;
+      background: rgba(255,69,0,0.12);
+      border: 1px solid rgba(255,69,0,0.3);
+      border-radius: 100px;
+      padding: 5px 12px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: 0.1em;
+      color: var(--orange2);
+    }
+    .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    /* DATE BAR */
+    .date-bar {
+      padding: 10px 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--muted);
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    /* MAIN NAV TABS */
+    .tabs {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 61px; z-index: 90;
+      background: rgba(8,8,8,0.97);
+      backdrop-filter: blur(20px);
+    }
+    .tab {
+      padding: 14px 8px;
+      text-align: center;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      border: none; background: none;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+      font-family: 'DM Mono', monospace;
+    }
+    .tab.active { color: var(--orange); border-bottom-color: var(--orange); }
+    .tab-icon { display: block; font-size: 20px; margin-bottom: 4px; }
+
+    /* PANELS */
+    .panel { display: none; padding: 20px; animation: fadeIn 0.3s ease; }
+    .panel.active { display: block; }
+    @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ── PANEL 1: ENTRENAMIENTO ── */
+    .coach-generate-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--orange), var(--orange2));
+      border: none; border-radius: 16px;
+      padding: 20px;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px; letter-spacing: 0.1em;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 32px rgba(255,69,0,0.3);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .coach-generate-btn:active { transform: scale(0.98); box-shadow: 0 4px 16px rgba(255,69,0,0.2); }
+    .coach-generate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .plan-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      font-size: 14px; line-height: 1.8;
+      color: #ccc;
+      white-space: pre-wrap;
+      min-height: 120px;
+      display: none;
+    }
+    .plan-box.visible { display: block; }
+    .plan-box strong { color: var(--text); }
+
+    .loading-coach {
+      display: none;
+      text-align: center; padding: 40px 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px; color: var(--muted);
+    }
+    .loading-coach.visible { display: block; }
+    .spinner-big {
+      width: 40px; height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--orange);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to{transform:rotate(360deg)} }
+
+    /* ── PANEL 2: DATOS GARMIN ── */
+    .data-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 10px; margin-bottom: 20px;
+    }
+    .data-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .data-card.full { grid-column: 1/-1; }
+    .data-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .data-val {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px; letter-spacing: 0.02em;
+      line-height: 1;
+    }
+    .data-unit {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--muted);
+      margin-left: 3px;
+    }
+    .data-sub {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--muted);
+      margin-top: 4px;
+    }
+    .status-pill {
+      display: inline-block;
+      padding: 3px 10px; border-radius: 100px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px; letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+    .status-green { background: rgba(57,255,20,0.1); color: var(--green); border: 1px solid rgba(57,255,20,0.2); }
+    .status-yellow { background: rgba(255,215,0,0.1); color: var(--yellow); border: 1px solid rgba(255,215,0,0.2); }
+    .status-red { background: rgba(255,59,59,0.1); color: var(--red); border: 1px solid rgba(255,59,59,0.2); }
+    .status-orange { background: rgba(255,69,0,0.1); color: var(--orange2); border: 1px solid rgba(255,69,0,0.2); }
+
+    /* battery bar */
+    .battery-wrap { margin-top: 8px; }
+    .battery-track { background: var(--bg3); border-radius: 4px; height: 6px; overflow: hidden; }
+    .battery-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--orange), var(--green)); transition: width 1s ease; }
+
+    /* hrv bar */
+    .hrv-range { margin-top: 8px; position: relative; height: 6px; background: var(--bg3); border-radius: 4px; }
+    .hrv-zone { position: absolute; height: 100%; background: rgba(57,255,20,0.3); border-radius: 4px; }
+    .hrv-marker { position: absolute; top: -4px; width: 3px; height: 14px; background: var(--green); border-radius: 2px; transform: translateX(-50%); }
+
+    /* sleep bars */
+    .sleep-phases { display: flex; gap: 4px; margin-top: 8px; height: 8px; border-radius: 4px; overflow: hidden; }
+    .sleep-deep { background: #1a3a6b; }
+    .sleep-rem  { background: #6b1a6b; }
+    .sleep-light { background: #3a3a3a; }
+
+    /* activities list */
+    .act-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .act-emoji { font-size: 24px; flex-shrink: 0; }
+    .act-info { flex: 1; min-width: 0; }
+    .act-name { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .act-meta { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 3px; }
+    .act-dist { font-family: 'Bebas Neue', sans-serif; font-size: 20px; color: var(--orange); flex-shrink: 0; }
+
+    /* ── PANEL 3: HISTORIAL ── */
+    .hist-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .hist-item:active { border-color: var(--orange); }
+    .hist-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px; color: var(--orange);
+      margin-bottom: 6px; letter-spacing: 0.06em;
+    }
+    .hist-preview { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .hist-detail {
+      display: none;
+      background: var(--bg3);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px; color: #aaa;
+      white-space: pre-wrap; line-height: 1.7;
+    }
+    .hist-detail.open { display: block; }
+    .empty-state {
+      text-align: center; padding: 60px 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px; color: var(--muted);
+      line-height: 1.8;
+    }
+    .empty-icon { font-size: 40px; margin-bottom: 16px; }
+
+    /* file input hidden */
+    #json-input { display: none; }
+    .load-btn {
+      width: 100%;
+      background: var(--bg2);
+      border: 1px dashed rgba(255,69,0,0.3);
+      border-radius: 12px;
+      padding: 16px;
+      color: var(--orange2);
+      font-family: 'DM Mono', monospace;
+      font-size: 12px; letter-spacing: 0.05em;
+      cursor: pointer;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .load-btn:hover { background: rgba(255,69,0,0.05); border-color: var(--orange); }
+
+    /* footer */
+    .bottom-safe { height: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">COACH<span>.</span>AI</div>
+  <div class="live-pill"><div class="live-dot"></div> GARMIN</div>
+</header>
+<div class="date-bar" id="date-bar">— cargando —</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab(0)">
+    <span class="tab-icon">🏋️</span>ENTRENO
+  </button>
+  <button class="tab" onclick="switchTab(1)">
+    <span class="tab-icon">📊</span>DATOS
+  </button>
+  <button class="tab" onclick="switchTab(2)">
+    <span class="tab-icon">📁</span>HISTORIAL
+  </button>
+</div>
+
+<!-- PANEL 0: ENTRENAMIENTO -->
+<div class="panel active" id="panel-0">
+  <button class="coach-generate-btn" id="gen-btn" onclick="generatePlan()">
+    ⚡ GENERAR PLAN DE HOY
+  </button>
+  <div class="loading-coach" id="loading-coach">
+    <div class="spinner-big"></div>
+    Consultando a tu coach...
+  </div>
+  <div class="plan-box" id="plan-box"></div>
+</div>
+
+<!-- PANEL 1: DATOS GARMIN -->
+<div class="panel" id="panel-1">
+  <label class="load-btn" for="json-input">📂 Cargar garmin_hoy.json del escritorio</label>
+  <input type="file" id="json-input" accept=".json" onchange="loadJSON(event)"/>
+  <div id="garmin-data">
+    <div class="empty-state">
+      <div class="empty-icon">📡</div>
+      Carga el archivo <strong>garmin_hoy.json</strong><br>desde tu escritorio para ver los datos
+    </div>
+  </div>
+</div>
+
+<!-- PANEL 2: HISTORIAL -->
+<div class="panel" id="panel-2">
+  <label class="load-btn" for="txt-input">📂 Cargar informes .txt de garmin_informes/</label>
+  <input type="file" id="txt-input" accept=".txt" multiple onchange="loadTxts(event)" style="display:none"/>
+  <div id="hist-list">
+    <div class="empty-state">
+      <div class="empty-icon">📋</div>
+      Carga los archivos .txt de<br><strong>Desktop/garmin_informes/</strong><br>para ver el historial
+    </div>
+  </div>
+</div>
+
+<div class="bottom-safe"></div>
+
+<script>
+// ── CONFIG ────────────────────────────────────────────────────────────────────
+const CLAUDE_API_KEY = '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';
+const MODEL = 'claude-sonnet-4-20250514';
+
+let garminData = null;
+let garminText = '';
+
+// ── DATE ──────────────────────────────────────────────────────────────────────
+const now = new Date();
+document.getElementById('date-bar').textContent =
+  now.toLocaleDateString('es-ES', {weekday:'long', day:'numeric', month:'long', year:'numeric'}).toUpperCase();
+
+// ── TABS ──────────────────────────────────────────────────────────────────────
+function switchTab(i) {
+  document.querySelectorAll('.tab').forEach((t,j) => t.classList.toggle('active', i===j));
+  document.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('active', i===j));
+}
+
+// ── LOAD JSON ─────────────────────────────────────────────────────────────────
+function loadJSON(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      garminData = JSON.parse(ev.target.result);
+      garminText = buildTextSummary(garminData);
+      renderGarminData(garminData);
+    } catch(err) {
+      alert('Error leyendo el JSON: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function buildTextSummary(d) {
+  const lines = [];
+  // HRV
+  const hrv = d.hrv?.hrvSummary || {};
+  if (hrv.lastNightAvg) lines.push(`HRV nocturno: ${hrv.lastNightAvg} ms | Máx 5min: ${hrv.lastNight5MinHigh} ms | Semanal: ${hrv.weeklyAvg} ms | Estado: ${hrv.status} | Zona óptima: ${hrv.baseline?.balancedLow}-${hrv.baseline?.balancedUpper} ms`);
+  // Body Battery
+  const bb = d.body_battery;
+  if (bb) { const v = Array.isArray(bb) ? bb[bb.length-1]?.charged ?? bb[bb.length-1]?.bodyBatteryLevel : bb?.charged; if(v) lines.push(`Body Battery: ${v}`); }
+  // Sleep
+  const sl = d.sueno?.dailySleepDTO || {};
+  if (sl.sleepTimeSeconds) {
+    const h = Math.floor(sl.sleepTimeSeconds/3600), m = Math.floor((sl.sleepTimeSeconds%3600)/60);
+    const score = sl.sleepScores?.overall?.value || '?';
+    lines.push(`Sueño: ${h}h ${m}min | Puntuación: ${score} | Profundo: ${Math.floor((sl.deepSleepSeconds||0)/60)}min | REM: ${Math.floor((sl.remSleepSeconds||0)/60)}min`);
+  }
+  // FC reposo
+  const rhr = d.fc_reposo?.allMetrics?.metricsMap?.WELLNESS_RESTING_HEART_RATE?.[0]?.value;
+  if (rhr) lines.push(`FC reposo: ${Math.round(rhr)} bpm`);
+  // Estrés
+  const stress = d.estres?.avgStressLevel || d.estres?.averageStressLevel;
+  if (stress) lines.push(`Estrés medio: ${stress}/100`);
+  // VO2max
+  const vo2 = d.estado_entrenamiento?.mostRecentVO2Max?.generic?.vo2MaxPreciseValue;
+  if (vo2) lines.push(`VO2max: ${vo2} ml/kg/min`);
+  // Actividades
+  const acts = d.actividades_recientes || [];
+  if (acts.length) {
+    lines.push(`\nÚltimas actividades (${acts.length}):`);
+    acts.slice(0,20).forEach(a => {
+      const km = ((a.distance||0)/1000).toFixed(1);
+      const min = Math.round((a.duration||0)/60);
+      const hr = a.averageHR ? ` · FC ${Math.round(a.averageHR)} bpm` : '';
+      const elev = a.elevationGain ? ` · +${Math.round(a.elevationGain)}m` : '';
+      lines.push(`· ${(a.startTimeLocal||'').slice(0,10)} ${a.activityName} (${a.activityType?.typeKey}) — ${km} km · ${min} min${hr}${elev}`);
+    });
+  }
+  return lines.join('\n');
+}
+
+function renderGarminData(d) {
+  const hrv = d.hrv?.hrvSummary || {};
+  const sl = d.sueno?.dailySleepDTO || {};
+  const rhr = d.fc_reposo?.allMetrics?.metricsMap?.WELLNESS_RESTING_HEART_RATE?.[0]?.value;
+  const bb_raw = d.body_battery;
+  const bb = bb_raw ? (Array.isArray(bb_raw) ? (bb_raw[bb_raw.length-1]?.charged ?? bb_raw[bb_raw.length-1]?.bodyBatteryLevel) : bb_raw?.charged) : null;
+  const stress = d.estres?.avgStressLevel || d.estres?.averageStressLevel;
+  const vo2 = d.estado_entrenamiento?.mostRecentVO2Max?.generic?.vo2MaxPreciseValue;
+  const acts = d.actividades_recientes || [];
+
+  const sleepH = Math.floor((sl.sleepTimeSeconds||0)/3600);
+  const sleepM = Math.floor(((sl.sleepTimeSeconds||0)%3600)/60);
+  const sleepScore = sl.sleepScores?.overall?.value || '?';
+  const deep = Math.floor((sl.deepSleepSeconds||0)/60);
+  const rem = Math.floor((sl.remSleepSeconds||0)/60);
+  const light = Math.floor(((sl.sleepTimeSeconds||0) - (sl.deepSleepSeconds||0) - (sl.remSleepSeconds||0))/60);
+
+  const hrvStatus = hrv.status || '?';
+  const hrvStatusCls = hrvStatus === 'BALANCED' ? 'status-green' : hrvStatus === 'UNBALANCED' ? 'status-red' : 'status-yellow';
+
+  const bbPct = bb ? Math.min(100, bb) : 0;
+  const bbCls = bbPct >= 70 ? 'status-green' : bbPct >= 40 ? 'status-yellow' : 'status-red';
+
+  // HRV bar
+  const balLow = hrv.baseline?.balancedLow || 0;
+  const balHigh = hrv.baseline?.balancedUpper || 100;
+  const maxHrv = 120;
+  const zonePct = (v) => Math.min(100, (v/maxHrv)*100);
+  const markerPct = hrv.lastNightAvg ? zonePct(hrv.lastNightAvg) : 0;
+
+  function emoji(type) {
+    const t = (type||'').toLowerCase();
+    if (t.includes('run')||t.includes('trail')) return '🏃';
+    if (t.includes('ride')||t.includes('cycl')||t.includes('virtual')) return '🚴';
+    if (t.includes('swim')) return '🏊';
+    if (t.includes('hike')||t.includes('walk')) return '🥾';
+    return '⚡';
+  }
+  function fmtDist(m) { return ((m||0)/1000).toFixed(1)+' km'; }
+  function fmtTime(s) { const h=Math.floor(s/3600),m=Math.floor((s%3600)/60); return h>0?h+'h '+m+'m':m+' min'; }
+  function fmtPace(mps,type) {
+    if (!mps) return '—';
+    if ((type||'').toLowerCase().includes('ride')) return (mps*3.6).toFixed(1)+' km/h';
+    const spk=1000/mps,m=Math.floor(spk/60),s=Math.round(spk%60);
+    return m+':'+String(s).padStart(2,'0')+'/km';
+  }
+
+  document.getElementById('garmin-data').innerHTML = `
+    <div class="data-grid">
+      <!-- Body Battery -->
+      <div class="data-card">
+        <div class="data-label">Body Battery</div>
+        <div class="data-val">${bb ?? '—'}<span class="data-unit">/100</span></div>
+        <div class="battery-wrap"><div class="battery-track"><div class="battery-fill" style="width:${bbPct}%"></div></div></div>
+        <div style="margin-top:6px"><span class="status-pill ${bbCls}">${bbPct>=70?'CARGADO':bbPct>=40?'MEDIO':'BAJO'}</span></div>
+      </div>
+      <!-- HRV -->
+      <div class="data-card">
+        <div class="data-label">HRV Nocturno</div>
+        <div class="data-val">${hrv.lastNightAvg ?? '—'}<span class="data-unit">ms</span></div>
+        <div class="hrv-range">
+          <div class="hrv-zone" style="left:${zonePct(balLow)}%;width:${zonePct(balHigh)-zonePct(balLow)}%"></div>
+          ${hrv.lastNightAvg ? `<div class="hrv-marker" style="left:${markerPct}%"></div>` : ''}
+        </div>
+        <div style="margin-top:8px"><span class="status-pill ${hrvStatusCls}">${hrvStatus}</span></div>
+      </div>
+      <!-- FC Reposo -->
+      <div class="data-card">
+        <div class="data-label">FC Reposo</div>
+        <div class="data-val">${rhr ? Math.round(rhr) : '—'}<span class="data-unit">bpm</span></div>
+        <div class="data-sub">Semanal: ${hrv.weeklyAvg ?? '—'} ms HRV</div>
+      </div>
+      <!-- Estrés -->
+      <div class="data-card">
+        <div class="data-label">Estrés</div>
+        <div class="data-val">${stress ?? '—'}<span class="data-unit">/100</span></div>
+        <div style="margin-top:8px"><span class="status-pill ${!stress?'status-orange':stress<30?'status-green':stress<60?'status-yellow':'status-red'}">${!stress?'—':stress<30?'BAJO':stress<60?'MODERADO':'ALTO'}</span></div>
+      </div>
+      <!-- Sueño -->
+      <div class="data-card full">
+        <div class="data-label">Sueño · Puntuación ${sleepScore}/100</div>
+        <div class="data-val">${sleepH}h ${sleepM}<span class="data-unit">min</span></div>
+        <div class="sleep-phases">
+          <div class="sleep-deep" style="flex:${deep}"></div>
+          <div class="sleep-rem" style="flex:${rem}"></div>
+          <div class="sleep-light" style="flex:${Math.max(1,light)}"></div>
+        </div>
+        <div class="data-sub" style="margin-top:6px">🔵 Profundo: ${deep}min &nbsp; 🟣 REM: ${rem}min &nbsp; ⬛ Ligero: ${light}min</div>
+      </div>
+      <!-- VO2max -->
+      ${vo2 ? `<div class="data-card full">
+        <div class="data-label">VO2max</div>
+        <div class="data-val">${vo2}<span class="data-unit">ml/kg/min</span></div>
+        <div class="data-sub">Fitness aeróbico · ${vo2>=55?'Excelente':vo2>=50?'Muy bueno':vo2>=45?'Bueno':'Moderado'}</div>
+      </div>` : ''}
+    </div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
+      // Últimas actividades (${acts.length})
+    </div>
+    ${acts.slice(0,20).map(a => `
+      <div class="act-item">
+        <div class="act-emoji">${emoji(a.activityType?.typeKey)}</div>
+        <div class="act-info">
+          <div class="act-name">${a.activityName}</div>
+          <div class="act-meta">${(a.startTimeLocal||'').slice(0,10)} · ${fmtTime(a.duration||0)}${a.averageHR?' · ♥ '+Math.round(a.averageHR)+' bpm':''}${a.elevationGain?' · +'+Math.round(a.elevationGain)+'m':''}</div>
+        </div>
+        <div class="act-dist">${fmtDist(a.distance)}</div>
+      </div>`).join('')}
+  `;
+}
+
+// ── GENERATE PLAN ─────────────────────────────────────────────────────────────
+async function generatePlan() {
+  if (!garminText) {
+    alert('Primero carga el archivo garmin_hoy.json en la pestaña DATOS');
+    switchTab(1);
+    return;
+  }
+  const btn = document.getElementById('gen-btn');
+  const loading = document.getElementById('loading-coach');
+  const planBox = document.getElementById('plan-box');
+
+  btn.disabled = true;
+  loading.classList.add('visible');
+  planBox.classList.remove('visible');
+
+  const prompt = `Eres el coach personal de Marcos Arranz, triatleta y ciclista de Madrid. Aquí están sus datos de hoy de Garmin Connect:
+
+${garminText}
+
+Basándote EXCLUSIVAMENTE en estos datos reales:
+1. Analiza su estado de recuperación de hoy (HRV, sueño, Body Battery, FC reposo, estrés)
+2. Dale una puntuación de predisposición para entrenar hoy del 1-10
+3. Recomienda el entrenamiento específico de hoy: tipo, duración, intensidad, zonas de FC, estructura exacta
+4. Da 2-3 consejos clave para hoy
+
+Sé directo, específico y motivador. Usa los números reales. Responde en español.`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': CLAUDE_API_KEY,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-allow-browser': 'true'
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await res.json();
+    const text = data.content?.map(c => c.text||'').join('') || 'Sin respuesta.';
+    planBox.textContent = text;
+    planBox.classList.add('visible');
+  } catch(e) {
+    planBox.textContent = 'Error: ' + e.message;
+    planBox.classList.add('visible');
+  } finally {
+    btn.disabled = false;
+    loading.classList.remove('visible');
+  }
+}
+
+// ── LOAD TXTs ─────────────────────────────────────────────────────────────────
+function loadTxts(e) {
+  const files = Array.from(e.target.files);
+  if (!files.length) return;
+
+  Promise.all(files.map(f => new Promise(res => {
+    const r = new FileReader();
+    r.onload = ev => res({ name: f.name, content: ev.target.result, date: f.name.replace('.txt','') });
+    r.readAsText(f);
+  }))).then(results => {
+    results.sort((a,b) => b.name.localeCompare(a.name));
+    const container = document.getElementById('hist-list');
+    container.innerHTML = results.map((r,i) => `
+      <div class="hist-item" onclick="toggleHist(${i})">
+        <div class="hist-date">📅 ${r.date}</div>
+        <div class="hist-preview">${r.content.slice(0,120).replace(/\n/g,' ')}...</div>
+        <div class="hist-detail" id="hist-${i}">${r.content}</div>
+      </div>`).join('');
+  });
+}
+
+function toggleHist(i) {
+  const el = document.getElementById('hist-'+i);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>
