@@ -8,13 +8,15 @@ on:
 jobs:
   garmin-coach:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: Instalar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.3.0
         with:
           python-version: '3.11'
 
