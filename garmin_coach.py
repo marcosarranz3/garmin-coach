@@ -33,7 +33,7 @@ GARMIN_PASSWORD  = os.environ.get("GARMIN_PASSWORD", "")
 # Cómo obtenerla: myaccount.google.com/apppasswords
 GMAIL_SENDER   = "marcosarranz96@gmail.com"
 GMAIL_APP_PASS = os.environ.get("GMAIL_APP_PASSWORD", "")
-GMAIL_TO       = "marcosarranz96@gmail.com"
+GMAIL_TO = os.environ.get("GMAIL_TO_OVERRIDE", "marcosarranz96@gmail.com")
 # ─────────────────────────────────────────────────────────────────────────────
 
 SESSION_FILE   = Path.home() / ".garmin_session"
