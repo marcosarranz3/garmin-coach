@@ -19,7 +19,7 @@ jobs:
           python-version: '3.11'
 
       - name: Instalar dependencias
-        run: pip install garminconnect
+        run: pip install garminconnect garth
 
       - name: Ejecutar script
         env:
