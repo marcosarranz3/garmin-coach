@@ -312,9 +312,7 @@ def build_summary(data, today):
 
 def send_email(summary, today, json_file):
     if not GMAIL_APP_PASS:
-        print("
-⚠️  Email no configurado. Añade tu contraseña de aplicación de Gmail en el script.")
-        print("   Guía: myaccount.google.com/apppasswords")
+        print("⚠️  Email no configurado. Añade GMAIL_APP_PASSWORD como secreto en GitHub.")
         return
 
     try:
@@ -347,11 +345,9 @@ Generado automáticamente por tu coach Garmin · {today.isoformat()}
             server.login(GMAIL_SENDER, GMAIL_APP_PASS)
             server.sendmail(GMAIL_SENDER, GMAIL_TO, msg.as_string())
 
-        print(f"
-📧 Email enviado a {GMAIL_TO}")
+        print(f"📧 Email enviado a {GMAIL_TO}")
     except Exception as e:
-        print(f"
-⚠️  Error enviando email: {e}")
+        print(f"Error enviando email: {e}")
 
 
 
