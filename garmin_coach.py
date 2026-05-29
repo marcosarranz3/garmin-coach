@@ -25,8 +25,8 @@ from email import encoders
 from pathlib import Path
 
 # ── Credenciales Garmin ───────────────────────────────────────────────────────
-GARMIN_EMAIL    = ""
-GARMIN_PASSWORD = ""
+GARMIN_EMAIL     = os.environ.get("GARMIN_EMAIL", "")
+GARMIN_PASSWORD  = os.environ.get("GARMIN_PASSWORD", "")
 
 # ── Email (Gmail) ─────────────────────────────────────────────────────────────
 # Necesitas una "Contraseña de aplicación" de Google (no tu contraseña normal).
