@@ -20,7 +20,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-07-01",
+    "calendarDate": "2026-07-02",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -93,7 +93,7 @@
   },
   "body_battery": [
     {
-      "date": "2026-07-01",
+      "date": "2026-07-02",
       "charged": null,
       "drained": null,
       "startTimestampGMT": null,
@@ -102,27 +102,27 @@
       "endTimestampLocal": null,
       "bodyBatteryValuesArray": [
         [
-          1782864000001,
+          1782950400001,
           null
         ],
         [
-          1782864000002,
+          1782950400002,
           null
         ],
         [
-          1782864000003,
+          1782950400003,
           null
         ],
         [
-          1782864000004,
+          1782950400004,
           null
         ],
         [
-          1782864000005,
+          1782950400005,
           null
         ],
         [
-          1782864000006,
+          1782950400006,
           null
         ]
       ],
@@ -134,7 +134,7 @@
     "dailySleepDTO": {
       "id": null,
       "userProfilePK": 100899315,
-      "calendarDate": "2026-06-30",
+      "calendarDate": "2026-07-01",
       "sleepTimeSeconds": null,
       "napTimeSeconds": null,
       "sleepWindowConfirmed": null,
@@ -161,8 +161,8 @@
   },
   "fc_reposo": {
     "userProfileId": 100899315,
-    "statisticsStartDate": "2026-07-01",
-    "statisticsEndDate": "2026-07-01",
+    "statisticsStartDate": "2026-07-02",
+    "statisticsEndDate": "2026-07-02",
     "allMetrics": {
       "metricsMap": {}
     },
@@ -170,7 +170,7 @@
   },
   "estres": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-07-01",
+    "calendarDate": "2026-07-02",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -184,7 +184,7 @@
   },
   "spo2": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-07-01",
+    "calendarDate": "2026-07-02",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -212,7 +212,7 @@
   },
   "respiracion": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-07-01",
+    "calendarDate": "2026-07-02",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -356,11 +356,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -481,11 +481,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -606,11 +606,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": true,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": true,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -733,11 +733,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -858,11 +858,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -982,11 +982,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": true,
       "elevationCorrected": true,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": true,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -1107,11 +1107,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -1234,11 +1234,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -1345,11 +1345,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -1470,11 +1470,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -1648,11 +1648,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -1777,11 +1777,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -1955,11 +1955,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -2080,11 +2080,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -2205,11 +2205,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -2383,11 +2383,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -2506,11 +2506,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -2633,11 +2633,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -2758,11 +2758,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     },
     {
@@ -2912,11 +2912,11 @@
       "autoCalcCalories": false,
       "favorite": false,
       "decoDive": false,
+      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
-      "purposeful": false,
-      "pr": false,
       "parent": false,
+      "purposeful": false,
       "manualActivity": false
     }
   ],
@@ -2937,7 +2937,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-07-01",
+    "calendarDate": "2026-07-02",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -3007,8 +3007,8 @@
     "latestSpo2ReadingTimeLocal": null,
     "averageMonitoringEnvironmentAltitude": null,
     "restingCaloriesFromActivity": null,
-    "from": 1782864000000,
-    "until": 1782950399999,
+    "from": 1782950400000,
+    "until": 1783036799999,
     "weight": null,
     "bmi": null,
     "bodyFat": null,
@@ -3029,7 +3029,7 @@
   "vo2max": [],
   "hidratacion": {
     "userId": 100899315,
-    "calendarDate": "2026-07-01",
+    "calendarDate": "2026-07-02",
     "valueInML": null,
     "goalInML": 2129.292,
     "dailyAverageinML": null,
@@ -3041,8 +3041,8 @@
   "peso": {
     "dailyWeightSummaries": [],
     "totalAverage": {
-      "from": 1782864000000,
-      "until": 1782950399999,
+      "from": 1782950400000,
+      "until": 1783036799999,
       "weight": null,
       "bmi": null,
       "bodyFat": null,
