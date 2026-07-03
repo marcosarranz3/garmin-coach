@@ -20,7 +20,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-07-02",
+    "calendarDate": "2026-07-03",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -93,7 +93,7 @@
   },
   "body_battery": [
     {
-      "date": "2026-07-02",
+      "date": "2026-07-03",
       "charged": null,
       "drained": null,
       "startTimestampGMT": null,
@@ -102,27 +102,27 @@
       "endTimestampLocal": null,
       "bodyBatteryValuesArray": [
         [
-          1782950400001,
+          1783036800001,
           null
         ],
         [
-          1782950400002,
+          1783036800002,
           null
         ],
         [
-          1782950400003,
+          1783036800003,
           null
         ],
         [
-          1782950400004,
+          1783036800004,
           null
         ],
         [
-          1782950400005,
+          1783036800005,
           null
         ],
         [
-          1782950400006,
+          1783036800006,
           null
         ]
       ],
@@ -134,7 +134,7 @@
     "dailySleepDTO": {
       "id": null,
       "userProfilePK": 100899315,
-      "calendarDate": "2026-07-01",
+      "calendarDate": "2026-07-02",
       "sleepTimeSeconds": null,
       "napTimeSeconds": null,
       "sleepWindowConfirmed": null,
@@ -161,8 +161,8 @@
   },
   "fc_reposo": {
     "userProfileId": 100899315,
-    "statisticsStartDate": "2026-07-02",
-    "statisticsEndDate": "2026-07-02",
+    "statisticsStartDate": "2026-07-03",
+    "statisticsEndDate": "2026-07-03",
     "allMetrics": {
       "metricsMap": {}
     },
@@ -170,7 +170,7 @@
   },
   "estres": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-07-02",
+    "calendarDate": "2026-07-03",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -184,7 +184,7 @@
   },
   "spo2": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-07-02",
+    "calendarDate": "2026-07-03",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -212,7 +212,7 @@
   },
   "respiracion": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-07-02",
+    "calendarDate": "2026-07-03",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -248,8 +248,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -353,13 +353,13 @@
       "endTimeGMT": "2026-06-23 04:03:39",
       "qualifyingDive": false,
       "activityUUID": "c176803e-551b-40f2-8c48-3333493bb496",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -373,8 +373,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -478,13 +478,13 @@
       "endTimeGMT": "2026-06-20 02:58:42",
       "qualifyingDive": false,
       "activityUUID": "3e3f9f79-2dad-4b16-a760-a548b263a4df",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -498,8 +498,8 @@
         "typeKey": "lap_swimming",
         "parentTypeId": 26,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -603,13 +603,13 @@
       "endTimeGMT": "2026-06-17 17:32:12",
       "qualifyingDive": false,
       "activityUUID": "ea2156df-dc85-431a-b851-2ec98db3cb69",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": true,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": true,
       "purposeful": false,
       "manualActivity": false
     },
@@ -623,8 +623,8 @@
         "typeKey": "pilates",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -730,13 +730,13 @@
       "endTimeGMT": "2026-06-12 10:42:10",
       "qualifyingDive": false,
       "activityUUID": "4175860d-32d4-4119-88a0-93bb3c469df0",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -750,8 +750,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -855,13 +855,13 @@
       "endTimeGMT": "2026-06-10 06:36:28",
       "qualifyingDive": false,
       "activityUUID": "663bc24b-2460-47b7-892c-416a55a5041b",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -875,8 +875,8 @@
         "typeKey": "cycling",
         "parentTypeId": 17,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -979,13 +979,13 @@
       "endTimeGMT": "2026-06-08 17:37:20",
       "qualifyingDive": false,
       "activityUUID": "e9c25f1d-6e58-4ed7-8f29-53f474196446",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": true,
       "elevationCorrected": true,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": true,
       "purposeful": false,
       "manualActivity": false
     },
@@ -999,8 +999,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -1104,13 +1104,13 @@
       "endTimeGMT": "2026-06-07 11:09:36",
       "qualifyingDive": false,
       "activityUUID": "6f4192e6-4e11-4f01-82d5-b484f3d323b2",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -1124,8 +1124,8 @@
         "typeKey": "pilates",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -1231,13 +1231,13 @@
       "endTimeGMT": "2026-06-06 09:15:36",
       "qualifyingDive": false,
       "activityUUID": "5717690f-abb5-4635-ac41-d71906f8f46e",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -1251,8 +1251,8 @@
         "typeKey": "indoor_cycling",
         "parentTypeId": 2,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -1342,13 +1342,13 @@
       "endTimeGMT": "2026-06-02 15:03:52",
       "qualifyingDive": false,
       "activityUUID": "23e5d3c0-cc49-4011-9232-f84d62414547",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -1362,8 +1362,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -1467,13 +1467,13 @@
       "endTimeGMT": "2026-06-01 11:09:43",
       "qualifyingDive": false,
       "activityUUID": "60759cd1-cd47-427e-a28e-d51c2bb5cc17",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -1487,8 +1487,8 @@
         "typeKey": "running",
         "parentTypeId": 17,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -1645,13 +1645,13 @@
       "endTimeGMT": "2026-05-31 09:41:11",
       "qualifyingDive": false,
       "activityUUID": "26a68eed-a06a-4fa9-a096-6e8c735ada39",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -1665,8 +1665,8 @@
         "typeKey": "walking",
         "parentTypeId": 17,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -1774,13 +1774,13 @@
       "endTimeGMT": "2026-05-30 10:33:22",
       "qualifyingDive": false,
       "activityUUID": "126d477e-ef3d-49b4-ae04-af01f7ed725e",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -1794,8 +1794,8 @@
         "typeKey": "running",
         "parentTypeId": 17,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -1952,13 +1952,13 @@
       "endTimeGMT": "2026-05-29 07:52:21",
       "qualifyingDive": false,
       "activityUUID": "bc2e4343-ae48-40de-a195-9d2d3514b7c3",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -1972,8 +1972,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -2077,13 +2077,13 @@
       "endTimeGMT": "2026-05-28 16:18:35",
       "qualifyingDive": false,
       "activityUUID": "d2d820b8-d582-4e20-acb5-25566fa6de03",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -2097,8 +2097,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -2202,13 +2202,13 @@
       "endTimeGMT": "2026-05-27 16:28:20",
       "qualifyingDive": false,
       "activityUUID": "c7e2c8a3-135a-4cba-bf1c-c267591159f4",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -2222,8 +2222,8 @@
         "typeKey": "running",
         "parentTypeId": 17,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -2380,13 +2380,13 @@
       "endTimeGMT": "2026-05-26 07:13:17",
       "qualifyingDive": false,
       "activityUUID": "e2fd48aa-2cd9-4aa4-957d-317ce3217d1c",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -2400,8 +2400,8 @@
         "typeKey": "cycling",
         "parentTypeId": 17,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -2503,13 +2503,13 @@
       "endTimeGMT": "2026-05-24 19:25:00",
       "qualifyingDive": false,
       "activityUUID": "3038f21b-f37d-4059-9e6c-2e2ab38fcd7f",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": true,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -2523,8 +2523,8 @@
         "typeKey": "pilates",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -2630,13 +2630,13 @@
       "endTimeGMT": "2026-05-22 11:18:32",
       "qualifyingDive": false,
       "activityUUID": "264f5f8a-7d6e-4b4f-a49b-1b5037a81df9",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -2650,8 +2650,8 @@
         "typeKey": "strength_training",
         "parentTypeId": 29,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": false
+        "trimmable": false,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -2755,13 +2755,13 @@
       "endTimeGMT": "2026-05-20 15:35:10",
       "qualifyingDive": false,
       "activityUUID": "41437aaf-2884-4f43-bf73-f3d3e9676754",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     },
@@ -2775,8 +2775,8 @@
         "typeKey": "running",
         "parentTypeId": 17,
         "isHidden": false,
-        "restricted": false,
-        "trimmable": true
+        "trimmable": true,
+        "restricted": false
       },
       "eventType": {
         "typeId": 9,
@@ -2909,13 +2909,13 @@
       "endTimeGMT": "2026-05-19 16:31:05",
       "qualifyingDive": false,
       "activityUUID": "7c232348-79a9-4526-8048-421c00599ba4",
-      "autoCalcCalories": false,
-      "favorite": false,
-      "decoDive": false,
-      "pr": false,
       "elevationCorrected": false,
       "atpActivity": false,
       "parent": false,
+      "decoDive": false,
+      "autoCalcCalories": false,
+      "favorite": false,
+      "pr": false,
       "purposeful": false,
       "manualActivity": false
     }
@@ -2937,7 +2937,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-07-02",
+    "calendarDate": "2026-07-03",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -3007,8 +3007,8 @@
     "latestSpo2ReadingTimeLocal": null,
     "averageMonitoringEnvironmentAltitude": null,
     "restingCaloriesFromActivity": null,
-    "from": 1782950400000,
-    "until": 1783036799999,
+    "from": 1783036800000,
+    "until": 1783123199999,
     "weight": null,
     "bmi": null,
     "bodyFat": null,
@@ -3029,7 +3029,7 @@
   "vo2max": [],
   "hidratacion": {
     "userId": 100899315,
-    "calendarDate": "2026-07-02",
+    "calendarDate": "2026-07-03",
     "valueInML": null,
     "goalInML": 2129.292,
     "dailyAverageinML": null,
@@ -3041,8 +3041,8 @@
   "peso": {
     "dailyWeightSummaries": [],
     "totalAverage": {
-      "from": 1782950400000,
-      "until": 1783036799999,
+      "from": 1783036800000,
+      "until": 1783123199999,
       "weight": null,
       "bmi": null,
       "bodyFat": null,
