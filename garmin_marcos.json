@@ -20,7 +20,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-08-05",
+    "calendarDate": "2026-08-06",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -93,7 +93,7 @@
   },
   "body_battery": [
     {
-      "date": "2026-08-05",
+      "date": "2026-08-06",
       "charged": null,
       "drained": null,
       "startTimestampGMT": null,
@@ -102,27 +102,27 @@
       "endTimestampLocal": null,
       "bodyBatteryValuesArray": [
         [
-          1785888000001,
+          1785974400001,
           null
         ],
         [
-          1785888000002,
+          1785974400002,
           null
         ],
         [
-          1785888000003,
+          1785974400003,
           null
         ],
         [
-          1785888000004,
+          1785974400004,
           null
         ],
         [
-          1785888000005,
+          1785974400005,
           null
         ],
         [
-          1785888000006,
+          1785974400006,
           null
         ]
       ],
@@ -132,52 +132,875 @@
   "hrv": {},
   "sueno": {
     "dailySleepDTO": {
-      "id": null,
+      "id": 1785883631000,
       "userProfilePK": 110733870,
-      "calendarDate": "2026-08-04",
-      "sleepTimeSeconds": null,
-      "napTimeSeconds": null,
-      "sleepWindowConfirmed": null,
-      "sleepWindowConfirmationType": null,
-      "sleepStartTimestampGMT": null,
-      "sleepEndTimestampGMT": null,
-      "sleepStartTimestampLocal": null,
-      "sleepEndTimestampLocal": null,
+      "calendarDate": "2026-08-05",
+      "sleepTimeSeconds": 27780,
+      "napTimeSeconds": 0,
+      "sleepWindowConfirmed": true,
+      "sleepWindowConfirmationType": "enhanced_confirmed_final",
+      "sleepStartTimestampGMT": 1785883631000,
+      "sleepEndTimestampGMT": 1785914531000,
+      "sleepStartTimestampLocal": 1785890831000,
+      "sleepEndTimestampLocal": 1785921731000,
       "autoSleepStartTimestampGMT": null,
       "autoSleepEndTimestampGMT": null,
       "sleepQualityTypePK": null,
       "sleepResultTypePK": null,
-      "unmeasurableSleepSeconds": null,
-      "deepSleepSeconds": null,
-      "lightSleepSeconds": null,
-      "remSleepSeconds": null,
-      "awakeSleepSeconds": null,
-      "deviceRemCapable": false,
+      "unmeasurableSleepSeconds": 0,
+      "deepSleepSeconds": 4440,
+      "lightSleepSeconds": 19860,
+      "remSleepSeconds": 3480,
+      "awakeSleepSeconds": 3120,
+      "deviceRemCapable": true,
       "retro": false,
+      "sleepFromDevice": true,
+      "awakeCount": 2,
+      "avgSleepStress": 11.0,
+      "ageGroup": "ADULT",
+      "avgHeartRate": 53.0,
+      "sleepScoreFeedback": "POSITIVE_LONG_AND_RECOVERING",
+      "sleepScoreInsight": "POSITIVE_LATE_BED_TIME",
+      "sleepScorePersonalizedInsight": "GENERAL_POS_FAIR_OR_POOR_SLEEP",
+      "sleepScores": {
+        "totalDuration": {
+          "qualifierKey": "EXCELLENT",
+          "optimalStart": 28800.0,
+          "optimalEnd": 28800.0
+        },
+        "stress": {
+          "qualifierKey": "EXCELLENT",
+          "optimalStart": 0.0,
+          "optimalEnd": 15.0
+        },
+        "awakeCount": {
+          "qualifierKey": "FAIR",
+          "optimalStart": 0.0,
+          "optimalEnd": 1.0
+        },
+        "overall": {
+          "value": 78,
+          "qualifierKey": "FAIR"
+        },
+        "remPercentage": {
+          "value": 13,
+          "qualifierKey": "FAIR",
+          "optimalStart": 21.0,
+          "optimalEnd": 31.0,
+          "idealStartInSeconds": 5833.8,
+          "idealEndInSeconds": 8611.8
+        },
+        "restlessness": {
+          "qualifierKey": "FAIR",
+          "optimalStart": 0.0,
+          "optimalEnd": 5.0
+        },
+        "lightPercentage": {
+          "value": 71,
+          "qualifierKey": "FAIR",
+          "optimalStart": 30.0,
+          "optimalEnd": 64.0,
+          "idealStartInSeconds": 8334.0,
+          "idealEndInSeconds": 17779.2
+        },
+        "deepPercentage": {
+          "value": 16,
+          "qualifierKey": "GOOD",
+          "optimalStart": 16.0,
+          "optimalEnd": 33.0,
+          "idealStartInSeconds": 4444.8,
+          "idealEndInSeconds": 9167.4
+        }
+      },
+      "sleepVersion": 2,
       "sleepNeed": {
         "userProfilePk": 110733870,
-        "calendarDate": "2026-08-04",
+        "calendarDate": "2026-08-05",
         "deviceId": 3457913740,
-        "timestampGmt": "2026-08-03T18:23:44",
+        "timestampGmt": "2026-08-04T06:59:11",
         "baseline": 480,
-        "actual": 480,
-        "feedback": "NO_CHANGE_BALANCED",
-        "trainingFeedback": "TODAYS_LOAD_AND_CHRONIC",
-        "sleepHistoryAdjustment": "DECREASING",
+        "actual": 520,
+        "feedback": "INCREASED",
+        "trainingFeedback": "CHRONIC",
+        "sleepHistoryAdjustment": "INCREASING_LOW_QUALITY",
         "hrvAdjustment": "NO_CHANGE",
         "napAdjustment": "NO_CHANGE",
         "displayedForTheDay": true,
         "preferredActivityTracker": true
+      },
+      "nextSleepNeed": {
+        "userProfilePk": 110733870,
+        "calendarDate": "2026-08-06",
+        "deviceId": 3457913740,
+        "timestampGmt": "2026-08-05T16:28:31",
+        "baseline": 480,
+        "actual": 480,
+        "feedback": "NO_CHANGE_NO_ADJUSTMENTS",
+        "trainingFeedback": "NO_CHANGE",
+        "sleepHistoryAdjustment": "NO_CHANGE",
+        "hrvAdjustment": "NO_CHANGE",
+        "napAdjustment": "NO_CHANGE",
+        "displayedForTheDay": false,
+        "preferredActivityTracker": true
       }
     },
-    "sleepMovement": null,
-    "remSleepData": null,
-    "sleepLevels": null
+    "sleepMovement": [],
+    "remSleepData": true,
+    "sleepLevels": [
+      {
+        "startGMT": "2026-08-04T22:47:11.0",
+        "endGMT": "2026-08-04T22:57:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-04T22:57:11.0",
+        "endGMT": "2026-08-04T23:25:11.0",
+        "activityLevel": 0.0
+      },
+      {
+        "startGMT": "2026-08-04T23:25:11.0",
+        "endGMT": "2026-08-04T23:57:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-04T23:57:11.0",
+        "endGMT": "2026-08-05T00:03:11.0",
+        "activityLevel": 0.0
+      },
+      {
+        "startGMT": "2026-08-05T00:03:11.0",
+        "endGMT": "2026-08-05T00:33:11.0",
+        "activityLevel": 3.0
+      },
+      {
+        "startGMT": "2026-08-05T00:33:11.0",
+        "endGMT": "2026-08-05T01:25:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T01:25:11.0",
+        "endGMT": "2026-08-05T02:05:11.0",
+        "activityLevel": 0.0
+      },
+      {
+        "startGMT": "2026-08-05T02:05:11.0",
+        "endGMT": "2026-08-05T02:24:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T02:24:11.0",
+        "endGMT": "2026-08-05T02:48:11.0",
+        "activityLevel": 2.0
+      },
+      {
+        "startGMT": "2026-08-05T02:48:11.0",
+        "endGMT": "2026-08-05T02:59:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T02:59:11.0",
+        "endGMT": "2026-08-05T03:14:11.0",
+        "activityLevel": 3.0
+      },
+      {
+        "startGMT": "2026-08-05T03:14:11.0",
+        "endGMT": "2026-08-05T03:35:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T03:35:11.0",
+        "endGMT": "2026-08-05T03:39:11.0",
+        "activityLevel": 3.0
+      },
+      {
+        "startGMT": "2026-08-05T03:39:11.0",
+        "endGMT": "2026-08-05T04:14:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T04:14:11.0",
+        "endGMT": "2026-08-05T04:30:11.0",
+        "activityLevel": 2.0
+      },
+      {
+        "startGMT": "2026-08-05T04:30:11.0",
+        "endGMT": "2026-08-05T04:42:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T04:42:11.0",
+        "endGMT": "2026-08-05T04:43:11.0",
+        "activityLevel": 3.0
+      },
+      {
+        "startGMT": "2026-08-05T04:43:11.0",
+        "endGMT": "2026-08-05T04:58:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T04:58:11.0",
+        "endGMT": "2026-08-05T04:59:11.0",
+        "activityLevel": 3.0
+      },
+      {
+        "startGMT": "2026-08-05T04:59:11.0",
+        "endGMT": "2026-08-05T05:40:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T05:40:11.0",
+        "endGMT": "2026-08-05T05:58:11.0",
+        "activityLevel": 2.0
+      },
+      {
+        "startGMT": "2026-08-05T05:58:11.0",
+        "endGMT": "2026-08-05T06:52:11.0",
+        "activityLevel": 1.0
+      },
+      {
+        "startGMT": "2026-08-05T06:52:11.0",
+        "endGMT": "2026-08-05T06:53:11.0",
+        "activityLevel": 3.0
+      },
+      {
+        "startGMT": "2026-08-05T06:53:11.0",
+        "endGMT": "2026-08-05T07:22:11.0",
+        "activityLevel": 1.0
+      }
+    ],
+    "sleepRestlessMoments": [
+      {
+        "value": 1,
+        "startGMT": 1785884351000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785885071000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785885971000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785886331000
+      },
+      {
+        "value": 2,
+        "startGMT": 1785886511000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785886691000
+      },
+      {
+        "value": 2,
+        "startGMT": 1785886871000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785887051000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785887951000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785890111000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785890831000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785891011000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785891731000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785892091000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785892451000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785892631000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785893171000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785894611000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785895331000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785895511000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785896771000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785897491000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785897671000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785898391000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785898571000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785899831000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785900371000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785900551000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785900731000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785902171000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785902531000
+      },
+      {
+        "value": 2,
+        "startGMT": 1785903791000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785904151000
+      },
+      {
+        "value": 3,
+        "startGMT": 1785904691000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785905051000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785905591000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785905771000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785906131000
+      },
+      {
+        "value": 2,
+        "startGMT": 1785906311000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785906671000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785907031000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785907571000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785907931000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785908831000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785909371000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785909551000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785910091000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785912251000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785912431000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785912611000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785912791000
+      },
+      {
+        "value": 1,
+        "startGMT": 1785913691000
+      },
+      {
+        "value": 2,
+        "startGMT": 1785914231000
+      }
+    ],
+    "restlessMomentsCount": 60,
+    "skinTempDataExists": false,
+    "hrvData": [
+      {
+        "value": 52.0,
+        "startGMT": 1785883656000
+      },
+      {
+        "value": 44.0,
+        "startGMT": 1785883956000
+      },
+      {
+        "value": 39.0,
+        "startGMT": 1785884256000
+      },
+      {
+        "value": 37.0,
+        "startGMT": 1785884556000
+      },
+      {
+        "value": 57.0,
+        "startGMT": 1785885456000
+      },
+      {
+        "value": 58.0,
+        "startGMT": 1785885756000
+      },
+      {
+        "value": 40.0,
+        "startGMT": 1785886056000
+      },
+      {
+        "value": 50.0,
+        "startGMT": 1785886356000
+      },
+      {
+        "value": 50.0,
+        "startGMT": 1785886656000
+      },
+      {
+        "value": 63.0,
+        "startGMT": 1785886956000
+      },
+      {
+        "value": 73.0,
+        "startGMT": 1785887256000
+      },
+      {
+        "value": 68.0,
+        "startGMT": 1785887556000
+      },
+      {
+        "value": 52.0,
+        "startGMT": 1785888456000
+      },
+      {
+        "value": 53.0,
+        "startGMT": 1785888756000
+      },
+      {
+        "value": 39.0,
+        "startGMT": 1785889056000
+      },
+      {
+        "value": 50.0,
+        "startGMT": 1785889356000
+      },
+      {
+        "value": 60.0,
+        "startGMT": 1785889656000
+      },
+      {
+        "value": 58.0,
+        "startGMT": 1785889956000
+      },
+      {
+        "value": 62.0,
+        "startGMT": 1785890256000
+      },
+      {
+        "value": 65.0,
+        "startGMT": 1785890556000
+      },
+      {
+        "value": 66.0,
+        "startGMT": 1785890856000
+      },
+      {
+        "value": 56.0,
+        "startGMT": 1785891156000
+      },
+      {
+        "value": 54.0,
+        "startGMT": 1785891456000
+      },
+      {
+        "value": 62.0,
+        "startGMT": 1785891756000
+      },
+      {
+        "value": 50.0,
+        "startGMT": 1785892056000
+      },
+      {
+        "value": 63.0,
+        "startGMT": 1785892356000
+      },
+      {
+        "value": 69.0,
+        "startGMT": 1785892656000
+      },
+      {
+        "value": 56.0,
+        "startGMT": 1785892956000
+      },
+      {
+        "value": 61.0,
+        "startGMT": 1785893256000
+      },
+      {
+        "value": 63.0,
+        "startGMT": 1785893556000
+      },
+      {
+        "value": 56.0,
+        "startGMT": 1785893856000
+      },
+      {
+        "value": 60.0,
+        "startGMT": 1785894156000
+      },
+      {
+        "value": 53.0,
+        "startGMT": 1785894456000
+      },
+      {
+        "value": 53.0,
+        "startGMT": 1785894756000
+      },
+      {
+        "value": 59.0,
+        "startGMT": 1785895056000
+      },
+      {
+        "value": 44.0,
+        "startGMT": 1785895356000
+      },
+      {
+        "value": 61.0,
+        "startGMT": 1785895656000
+      },
+      {
+        "value": 64.0,
+        "startGMT": 1785895956000
+      },
+      {
+        "value": 60.0,
+        "startGMT": 1785896256000
+      },
+      {
+        "value": 60.0,
+        "startGMT": 1785896556000
+      },
+      {
+        "value": 64.0,
+        "startGMT": 1785896856000
+      },
+      {
+        "value": 72.0,
+        "startGMT": 1785897156000
+      },
+      {
+        "value": 58.0,
+        "startGMT": 1785897456000
+      },
+      {
+        "value": 57.0,
+        "startGMT": 1785897756000
+      },
+      {
+        "value": 71.0,
+        "startGMT": 1785898056000
+      },
+      {
+        "value": 109.0,
+        "startGMT": 1785898356000
+      },
+      {
+        "value": 73.0,
+        "startGMT": 1785898656000
+      },
+      {
+        "value": 76.0,
+        "startGMT": 1785898956000
+      },
+      {
+        "value": 46.0,
+        "startGMT": 1785899256000
+      },
+      {
+        "value": 70.0,
+        "startGMT": 1785899556000
+      },
+      {
+        "value": 66.0,
+        "startGMT": 1785899856000
+      },
+      {
+        "value": 58.0,
+        "startGMT": 1785900156000
+      },
+      {
+        "value": 57.0,
+        "startGMT": 1785900456000
+      },
+      {
+        "value": 71.0,
+        "startGMT": 1785900756000
+      },
+      {
+        "value": 75.0,
+        "startGMT": 1785901056000
+      },
+      {
+        "value": 62.0,
+        "startGMT": 1785901356000
+      },
+      {
+        "value": 48.0,
+        "startGMT": 1785901656000
+      },
+      {
+        "value": 45.0,
+        "startGMT": 1785901956000
+      },
+      {
+        "value": 48.0,
+        "startGMT": 1785902256000
+      },
+      {
+        "value": 52.0,
+        "startGMT": 1785902556000
+      },
+      {
+        "value": 58.0,
+        "startGMT": 1785902856000
+      },
+      {
+        "value": 65.0,
+        "startGMT": 1785903156000
+      },
+      {
+        "value": 56.0,
+        "startGMT": 1785903456000
+      },
+      {
+        "value": 52.0,
+        "startGMT": 1785903756000
+      },
+      {
+        "value": 62.0,
+        "startGMT": 1785904056000
+      },
+      {
+        "value": 47.0,
+        "startGMT": 1785904356000
+      },
+      {
+        "value": 70.0,
+        "startGMT": 1785904656000
+      },
+      {
+        "value": 56.0,
+        "startGMT": 1785904956000
+      },
+      {
+        "value": 46.0,
+        "startGMT": 1785905256000
+      },
+      {
+        "value": 47.0,
+        "startGMT": 1785905556000
+      },
+      {
+        "value": 50.0,
+        "startGMT": 1785905856000
+      },
+      {
+        "value": 65.0,
+        "startGMT": 1785906156000
+      },
+      {
+        "value": 64.0,
+        "startGMT": 1785906456000
+      },
+      {
+        "value": 60.0,
+        "startGMT": 1785906756000
+      },
+      {
+        "value": 52.0,
+        "startGMT": 1785907056000
+      },
+      {
+        "value": 51.0,
+        "startGMT": 1785907356000
+      },
+      {
+        "value": 47.0,
+        "startGMT": 1785907656000
+      },
+      {
+        "value": 70.0,
+        "startGMT": 1785907956000
+      },
+      {
+        "value": 63.0,
+        "startGMT": 1785908256000
+      },
+      {
+        "value": 55.0,
+        "startGMT": 1785908556000
+      },
+      {
+        "value": 68.0,
+        "startGMT": 1785908856000
+      },
+      {
+        "value": 69.0,
+        "startGMT": 1785909156000
+      },
+      {
+        "value": 93.0,
+        "startGMT": 1785909456000
+      },
+      {
+        "value": 59.0,
+        "startGMT": 1785909756000
+      },
+      {
+        "value": 63.0,
+        "startGMT": 1785910056000
+      },
+      {
+        "value": 58.0,
+        "startGMT": 1785910356000
+      },
+      {
+        "value": 70.0,
+        "startGMT": 1785910656000
+      },
+      {
+        "value": 59.0,
+        "startGMT": 1785910956000
+      },
+      {
+        "value": 58.0,
+        "startGMT": 1785911256000
+      },
+      {
+        "value": 65.0,
+        "startGMT": 1785911556000
+      },
+      {
+        "value": 57.0,
+        "startGMT": 1785911856000
+      },
+      {
+        "value": 52.0,
+        "startGMT": 1785912156000
+      },
+      {
+        "value": 68.0,
+        "startGMT": 1785912456000
+      },
+      {
+        "value": 69.0,
+        "startGMT": 1785912756000
+      },
+      {
+        "value": 71.0,
+        "startGMT": 1785913056000
+      },
+      {
+        "value": 48.0,
+        "startGMT": 1785913356000
+      },
+      {
+        "value": 72.0,
+        "startGMT": 1785913656000
+      },
+      {
+        "value": 67.0,
+        "startGMT": 1785913956000
+      },
+      {
+        "value": 90.0,
+        "startGMT": 1785914256000
+      }
+    ],
+    "breathingDisruptionData": [
+      {
+        "value": 255,
+        "startGMT": 1785883631000,
+        "endGMT": 1785883631000
+      },
+      {
+        "value": 255,
+        "startGMT": 1785883631000,
+        "endGMT": 1785914531000
+      }
+    ],
+    "avgOvernightHrv": 60.0,
+    "hrvStatus": "BALANCED"
   },
   "fc_reposo": {
     "userProfileId": 110733870,
-    "statisticsStartDate": "2026-08-05",
-    "statisticsEndDate": "2026-08-05",
+    "statisticsStartDate": "2026-08-06",
+    "statisticsEndDate": "2026-08-06",
     "allMetrics": {
       "metricsMap": {}
     },
@@ -185,7 +1008,7 @@
   },
   "estres": {
     "userProfilePK": 110733870,
-    "calendarDate": "2026-08-05",
+    "calendarDate": "2026-08-06",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -199,7 +1022,7 @@
   },
   "spo2": {
     "userProfilePK": 110733870,
-    "calendarDate": "2026-08-05",
+    "calendarDate": "2026-08-06",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -227,7 +1050,7 @@
   },
   "respiracion": {
     "userProfilePK": 110733870,
-    "calendarDate": "2026-08-05",
+    "calendarDate": "2026-08-06",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -254,6 +1077,216 @@
   "pasos": [],
   "actividades_recientes": [
     {
+      "activityId": 23867187595,
+      "activityName": "Santander Carrera",
+      "startTimeLocal": "2026-08-05 17:26:39",
+      "startTimeGMT": "2026-08-05 15:26:39",
+      "activityType": {
+        "typeId": 1,
+        "typeKey": "running",
+        "parentTypeId": 17,
+        "isHidden": false,
+        "restricted": false,
+        "trimmable": true
+      },
+      "eventType": {
+        "typeId": 9,
+        "typeKey": "uncategorized",
+        "sortOrder": 10
+      },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
+      "distance": 10027.240234375,
+      "duration": 3556.660888671875,
+      "elapsedDuration": 3698.81494140625,
+      "movingDuration": 3553.550979614258,
+      "elevationGain": 27.6700000166893,
+      "elevationLoss": 50.810000002384186,
+      "averageSpeed": 2.819000005722046,
+      "maxSpeed": 5.467999935150146,
+      "startLatitude": 43.4727431461215,
+      "startLongitude": -3.7930709403008223,
+      "hasPolyline": true,
+      "hasImages": false,
+      "ownerId": 110733870,
+      "ownerDisplayName": "6246cdac-120e-443b-a868-b47ca92dacf4",
+      "ownerFullName": "Marcos Arranz",
+      "ownerProfileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/c42f60e1-f650-4c25-b31c-9866c35d6136-prth.png",
+      "ownerProfileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/c42f60e1-f650-4c25-b31c-9866c35d6136-prfr.png",
+      "ownerProfileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/c42f60e1-f650-4c25-b31c-9866c35d6136-prof.png",
+      "calories": 714.0,
+      "bmrCalories": 85.0,
+      "averageHR": 148.0,
+      "maxHR": 194.0,
+      "averageRunningCadenceInStepsPerMinute": 164.8125,
+      "maxRunningCadenceInStepsPerMinute": 204.0,
+      "steps": 9668,
+      "userRoles": [
+        "SCOPE_GOLF_API_READ",
+        "SCOPE_DI_OAUTH_2_DEVICE_REVOCATION_WRITE",
+        "SCOPE_DI_OAUTH_2_CREATE_DI_USER",
+        "SCOPE_ATP_READ",
+        "SCOPE_DIVE_API_WRITE",
+        "SCOPE_COMMUNITY_COURSE_ADMIN_READ",
+        "SCOPE_DIVE_API_READ",
+        "SCOPE_DT_ACTIVE_INTELLIGENCE_READ",
+        "SCOPE_DI_OAUTH_2_CLIENT_READ",
+        "SCOPE_CONNECT_WRITE",
+        "SCOPE_COMMUNITY_COURSE_WRITE",
+        "SCOPE_CONNECT_MCT_DAILY_LOG_READ",
+        "SCOPE_CONNECT_API_CREATE_UPDATE_USER",
+        "SCOPE_MESSAGE_GENERATION_READ",
+        "SCOPE_DI_OAUTH_2_CLIENT_REVOCATION_ADMIN",
+        "SCOPE_CONNECT_WEB_TEMPLATE_RENDER",
+        "SCOPE_ACTIVITY_DETECTION_READ",
+        "SCOPE_OMT_SUBSCRIPTION_ADMIN_READ",
+        "SCOPE_DI_OAUTH_2_MANAGED_STATUS_ADMIN_WRITE",
+        "SCOPE_CONNECT_NON_SOCIAL_SHARED_READ",
+        "SCOPE_CONNECT_READ",
+        "SCOPE_DI_OAUTH_2_PRERELEASE_PERMISSIONS_ADMIN_WRITE",
+        "SCOPE_DI_OAUTH_2_TOKEN_ADMIN",
+        "SCOPE_ATP_WRITE",
+        "ROLE_CONNECTUSER",
+        "ROLE_FITNESS_USER",
+        "ROLE_WELLNESS_USER",
+        "ROLE_OUTDOOR_USER",
+        "ROLE_GARMIN_USER"
+      ],
+      "privacy": {
+        "typeId": 3,
+        "typeKey": "subscribers"
+      },
+      "userPro": false,
+      "hasVideo": false,
+      "isPurposeful": false,
+      "timeZoneId": 124,
+      "beginTimestamp": 1785943599000,
+      "sportTypeId": 1,
+      "avgPower": 316.0,
+      "maxPower": 552.0,
+      "aerobicTrainingEffect": 3.700000047683716,
+      "anaerobicTrainingEffect": 0.30000001192092896,
+      "normPower": 329.0,
+      "avgVerticalOscillation": 9.75999984741211,
+      "avgGroundContactTime": 274.79998779296875,
+      "avgStrideLength": 102.05000000000001,
+      "vO2MaxValue": 52.0,
+      "avgVerticalRatio": 9.489999771118164,
+      "avgGroundContactBalance": 49.16999816894531,
+      "deviceId": 3457913740,
+      "minElevation": -2.0,
+      "maxElevation": 23.200000762939453,
+      "avgElevation": 5.512204707544653,
+      "maxDoubleCadence": 204.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
+      "summarizedDiveInfo": {
+        "summarizedDiveGases": []
+      },
+      "maxVerticalSpeed": 0.6000001430511475,
+      "manufacturer": "GARMIN",
+      "locationName": "Santander",
+      "lapCount": 11,
+      "endLatitude": 43.47622364759445,
+      "endLongitude": -3.796924101188779,
+      "isAtpActivity": false,
+      "waterEstimated": 987.0,
+      "minRespirationRate": 19.549999237060547,
+      "maxRespirationRate": 46.5099983215332,
+      "avgRespirationRate": 32.79999923706055,
+      "trainingEffectLabel": "TEMPO",
+      "activityTrainingLoad": 143.64222717285156,
+      "minActivityLapDuration": 4.809999942779541,
+      "aerobicTrainingEffectMessage": "IMPROVING_AEROBIC_FITNESS_2",
+      "anaerobicTrainingEffectMessage": "NO_ANAEROBIC_BENEFIT_0",
+      "splitSummaries": [
+        {
+          "noOfSplits": 1,
+          "totalAscent": 27.070000000298023,
+          "duration": 3556.660888671875,
+          "splitType": "INTERVAL_ACTIVE",
+          "maxElevationGain": 27.070000000298023,
+          "averageElevationGain": 27.070000000298023,
+          "maxDistance": 10027,
+          "maxDistanceWithPrecision": 10027.259765625,
+          "distance": 10027.259765625,
+          "averageSpeed": 2.819000005722046,
+          "maxSpeed": 5.4679999351501465,
+          "elevationLoss": 50.17000000178814,
+          "avgStepFrequency": 164.796875,
+          "avgStepLength": 1.0205000000000002,
+          "verticalRatio": 9.489999771118164,
+          "verticalOscillation": 9.75999984741211,
+          "avgGroundContactBalanceLeft": 49.16999816894531,
+          "avgGroundContactTime": 274.79998779296875
+        },
+        {
+          "noOfSplits": 1,
+          "duration": 0.0,
+          "splitType": "RWD_STAND"
+        },
+        {
+          "noOfSplits": 3,
+          "totalAscent": 27.070000000298023,
+          "duration": 3556.491943359375,
+          "splitType": "RWD_RUN",
+          "maxElevationGain": 17.189999997615814,
+          "averageElevationGain": 9.540000021457672,
+          "maxDistance": 4768,
+          "maxDistanceWithPrecision": 4768.22998046875,
+          "distance": 10027.240234375,
+          "averageSpeed": 2.819000005722046,
+          "maxSpeed": 5.4679999351501465,
+          "elevationLoss": 50.17000000178814,
+          "avgStepFrequency": 164.796875,
+          "avgStepLength": 1.0205000000000002,
+          "verticalRatio": 9.489999771118164,
+          "verticalOscillation": 9.75999984741211,
+          "avgGroundContactBalanceLeft": 49.16999816894531,
+          "avgGroundContactTime": 274.79998779296875
+        },
+        {
+          "noOfSplits": 3,
+          "duration": 0.0,
+          "splitType": "RWD_WALK"
+        }
+      ],
+      "hasSplits": true,
+      "hasIntensityIntervals": false,
+      "isManualActivity": false,
+      "avgGradeAdjustedSpeed": 2.803999900817871,
+      "differenceBodyBattery": -11,
+      "hasHeatMap": false,
+      "fastestSplit_1000": 252.4770050048828,
+      "fastestSplit_1609": 427.2950134277344,
+      "fastestSplit_5000": 1550.8480224609375,
+      "fastestSplit_10000": 3688.60205078125,
+      "hrTimeInZone_1": 1857.785,
+      "hrTimeInZone_2": 413.448,
+      "hrTimeInZone_3": 609.953,
+      "hrTimeInZone_4": 385.983,
+      "hrTimeInZone_5": 278.163,
+      "powerTimeInZone_1": 1735.933,
+      "powerTimeInZone_2": 666.677,
+      "powerTimeInZone_3": 601.957,
+      "powerTimeInZone_4": 245.987,
+      "powerTimeInZone_5": 70.188,
+      "endTimeGMT": "2026-08-05 16:28:17",
+      "qualifyingDive": false,
+      "activityUUID": "9c8d6620-4bcd-4b47-b981-4f9933d0c6d8",
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
+      "pr": false,
+      "purposeful": false,
+      "manualActivity": false,
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
+    },
+    {
       "activityId": 23839919111,
       "activityName": "Madrid Carrera",
       "startTimeLocal": "2026-08-03 19:33:09",
@@ -271,6 +1304,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 10108.9697265625,
       "duration": 2993.861083984375,
       "elapsedDuration": 3021.748046875,
@@ -333,6 +1370,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1785778389000,
       "sportTypeId": 1,
@@ -352,6 +1390,8 @@
       "maxElevation": 599.7999877929688,
       "avgElevation": 578.9513694136319,
       "maxDoubleCadence": 212.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -361,6 +1401,7 @@
       "lapCount": 11,
       "endLatitude": 40.395333683118224,
       "endLongitude": -3.6802540440112352,
+      "isAtpActivity": false,
       "waterEstimated": 831.0,
       "minRespirationRate": 18.940000534057617,
       "maxRespirationRate": 50.380001068115234,
@@ -432,6 +1473,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 48,
       "avgGradeAdjustedSpeed": 3.371000051498413,
@@ -454,15 +1496,15 @@
       "endTimeGMT": "2026-08-03 18:23:30",
       "qualifyingDive": false,
       "activityUUID": "1a951e80-8743-453e-a3f2-3b7daa4ce922",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23791706100,
@@ -482,6 +1524,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 706.2999877929688,
       "duration": 5471.4208984375,
       "elapsedDuration": 5471.4208984375,
@@ -539,6 +1585,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1785416949000,
       "sportTypeId": 82,
@@ -547,6 +1594,8 @@
       "deviceId": 3457913740,
       "minTemperature": 29.0,
       "maxTemperature": 30.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -555,6 +1604,7 @@
       "lapCount": 1,
       "endLatitude": 36.96153382770717,
       "endLongitude": -1.8997284304350615,
+      "isAtpActivity": false,
       "waterEstimated": 886.0,
       "trainingEffectLabel": "UNKNOWN",
       "activityTrainingLoad": 7.82928466796875,
@@ -564,6 +1614,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 37,
       "vigorousIntensityMinutes": 1,
       "differenceBodyBattery": -5,
@@ -576,15 +1627,15 @@
       "endTimeGMT": "2026-07-30 14:40:20",
       "qualifyingDive": false,
       "activityUUID": "a4b91b88-17cf-4fff-b764-9d80397d5065",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23780986121,
@@ -604,6 +1655,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 8055.14013671875,
       "duration": 2662.006103515625,
       "elapsedDuration": 2662.006103515625,
@@ -666,6 +1721,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1785349733000,
       "sportTypeId": 1,
@@ -684,6 +1740,8 @@
       "maxElevation": 10.800000190734863,
       "avgElevation": 3.065589774805831,
       "maxDoubleCadence": 181.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -693,6 +1751,7 @@
       "lapCount": 9,
       "endLatitude": 36.987454276531935,
       "endLongitude": -1.9017891213297844,
+      "isAtpActivity": false,
       "waterEstimated": 739.0,
       "trainingEffectLabel": "TEMPO",
       "activityTrainingLoad": 165.63796997070312,
@@ -745,6 +1804,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 43,
       "avgGradeAdjustedSpeed": 3.029000043869019,
@@ -766,15 +1826,15 @@
       "endTimeGMT": "2026-07-29 19:13:15",
       "qualifyingDive": false,
       "activityUUID": "6a03e85f-84d7-40a9-91e8-799446b42f61",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23780984585,
@@ -794,6 +1854,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 1851.97998046875,
       "duration": 1888.3489990234375,
       "elapsedDuration": 1893.2860107421875,
@@ -856,6 +1920,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1785318297000,
       "sportTypeId": 17,
@@ -867,6 +1932,8 @@
       "maxElevation": 105.19999694824219,
       "avgElevation": 59.609422968455,
       "maxDoubleCadence": 159.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -876,6 +1943,7 @@
       "lapCount": 1,
       "endLatitude": 36.94019232876599,
       "endLongitude": -1.9366124924272299,
+      "isAtpActivity": false,
       "waterEstimated": 449.0,
       "trainingEffectLabel": "RECOVERY",
       "activityTrainingLoad": 16.097930908203125,
@@ -885,6 +1953,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 19,
       "vigorousIntensityMinutes": 6,
       "differenceBodyBattery": -2,
@@ -897,15 +1966,15 @@
       "endTimeGMT": "2026-07-29 10:16:30",
       "qualifyingDive": false,
       "activityUUID": "9d12a840-0da8-4cad-a219-6438b7c973ca",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23754953542,
@@ -925,6 +1994,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 7050.5,
       "duration": 2401.62109375,
       "elapsedDuration": 2423.968994140625,
@@ -987,6 +2060,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1785177763000,
       "sportTypeId": 1,
@@ -1005,6 +2079,8 @@
       "maxElevation": 7.800000190734863,
       "avgElevation": 3.4820982459234657,
       "maxDoubleCadence": 170.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -1014,6 +2090,7 @@
       "lapCount": 8,
       "endLatitude": 36.98740758933127,
       "endLongitude": -1.9018886983394623,
+      "isAtpActivity": false,
       "waterEstimated": 666.0,
       "trainingEffectLabel": "AEROBIC_BASE",
       "activityTrainingLoad": 120.03877258300781,
@@ -1079,6 +2156,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 39,
       "avgGradeAdjustedSpeed": 2.937999963760376,
@@ -1100,15 +2178,15 @@
       "endTimeGMT": "2026-07-27 19:23:06",
       "qualifyingDive": false,
       "activityUUID": "a1b6c836-2087-4b23-b097-d103b77c4aab",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23754952404,
@@ -1128,6 +2206,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 10.800000190734863,
       "duration": 3199.787109375,
       "elapsedDuration": 3199.787109375,
@@ -1185,6 +2267,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1785146609000,
       "sportTypeId": 82,
@@ -1193,6 +2276,8 @@
       "deviceId": 3457913740,
       "minTemperature": 24.0,
       "maxTemperature": 28.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -1201,6 +2286,7 @@
       "lapCount": 1,
       "endLatitude": 36.99213406071067,
       "endLongitude": -1.8863836862146854,
+      "isAtpActivity": false,
       "waterEstimated": 460.0,
       "trainingEffectLabel": "UNKNOWN",
       "activityTrainingLoad": 2.5908050537109375,
@@ -1210,6 +2296,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 13,
       "vigorousIntensityMinutes": 0,
       "differenceBodyBattery": -2,
@@ -1222,15 +2309,15 @@
       "endTimeGMT": "2026-07-27 10:56:48",
       "qualifyingDive": false,
       "activityUUID": "9957c591-235d-44c1-9580-9770580048f8",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23754951855,
@@ -1250,6 +2337,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 0.0,
       "duration": 2966.31591796875,
       "elapsedDuration": 2966.31591796875,
@@ -1304,6 +2395,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1785141223000,
       "sportTypeId": 82,
@@ -1312,11 +2404,14 @@
       "deviceId": 3457913740,
       "minTemperature": 23.0,
       "maxTemperature": 28.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
       "manufacturer": "GARMIN",
       "lapCount": 1,
+      "isAtpActivity": false,
       "waterEstimated": 470.0,
       "trainingEffectLabel": "RECOVERY",
       "activityTrainingLoad": 9.882156372070312,
@@ -1326,6 +2421,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 20,
       "vigorousIntensityMinutes": 3,
       "differenceBodyBattery": -3,
@@ -1338,15 +2434,15 @@
       "endTimeGMT": "2026-07-27 09:23:09",
       "qualifyingDive": false,
       "activityUUID": "76a45641-b061-4363-8898-1bedd4790122",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23730226546,
@@ -1366,6 +2462,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 8053.2099609375,
       "duration": 2487.85693359375,
       "elapsedDuration": 2506.883056640625,
@@ -1428,6 +2528,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1784912549000,
       "sportTypeId": 1,
@@ -1446,6 +2547,8 @@
       "maxElevation": 17.399999618530273,
       "avgElevation": 8.732958196539588,
       "maxDoubleCadence": 174.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -1455,6 +2558,7 @@
       "lapCount": 9,
       "endLatitude": 36.98768310248852,
       "endLongitude": -1.9017577730119228,
+      "isAtpActivity": false,
       "waterEstimated": 690.0,
       "trainingEffectLabel": "VO2MAX",
       "activityTrainingLoad": 228.2123260498047,
@@ -1529,6 +2633,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 40,
       "avgGradeAdjustedSpeed": 3.263000011444092,
@@ -1550,15 +2655,15 @@
       "endTimeGMT": "2026-07-24 17:44:15",
       "qualifyingDive": false,
       "activityUUID": "a5958387-2d53-4c1b-872a-35de72bfbac4",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23730224987,
@@ -1578,6 +2683,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 54.439998626708984,
       "duration": 1637.282958984375,
       "elapsedDuration": 1776.529052734375,
@@ -1635,6 +2744,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1784830982000,
       "sportTypeId": 82,
@@ -1643,6 +2753,8 @@
       "deviceId": 3457913740,
       "minTemperature": 28.0,
       "maxTemperature": 30.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -1651,6 +2763,7 @@
       "lapCount": 1,
       "endLatitude": 37.025276524946094,
       "endLongitude": -1.8789829686284065,
+      "isAtpActivity": false,
       "waterEstimated": 269.0,
       "trainingEffectLabel": "UNKNOWN",
       "activityTrainingLoad": 4.2529296875,
@@ -1660,6 +2773,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 16,
       "vigorousIntensityMinutes": 0,
       "differenceBodyBattery": -2,
@@ -1672,15 +2786,15 @@
       "endTimeGMT": "2026-07-23 18:52:38",
       "qualifyingDive": false,
       "activityUUID": "64aee6f9-3248-400f-9aae-db4ba032384d",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23682167284,
@@ -1700,6 +2814,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 8016.7900390625,
       "duration": 2388.264892578125,
       "elapsedDuration": 2388.264892578125,
@@ -1762,6 +2880,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1784657583000,
       "sportTypeId": 1,
@@ -1781,6 +2900,8 @@
       "maxElevation": 602.7999877929688,
       "avgElevation": 584.334588132312,
       "maxDoubleCadence": 194.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -1790,6 +2911,7 @@
       "lapCount": 9,
       "endLatitude": 40.39647345431149,
       "endLongitude": -3.686654716730118,
+      "isAtpActivity": false,
       "waterEstimated": 663.0,
       "minRespirationRate": 16.760000228881836,
       "maxRespirationRate": 47.40999984741211,
@@ -1835,6 +2957,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 37,
       "avgGradeAdjustedSpeed": 3.3480000495910645,
@@ -1856,15 +2979,15 @@
       "endTimeGMT": "2026-07-21 18:52:51",
       "qualifyingDive": false,
       "activityUUID": "9060ee6d-a324-4d34-9dfb-be40dc3f2e9e",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23682167004,
@@ -1884,6 +3007,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 0.0,
       "duration": 3188.9208984375,
       "elapsedDuration": 3188.9208984375,
@@ -1939,12 +3066,14 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1784572799000,
       "sportTypeId": 10,
       "aerobicTrainingEffect": 2.200000047683716,
       "anaerobicTrainingEffect": 2.0,
       "deviceId": 3457913740,
+      "isElevationCorrected": false,
       "summarizedExerciseSets": [
         {
           "category": "LATERAL_RAISE",
@@ -1955,11 +3084,13 @@
           "maxWeight": 0
         }
       ],
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
       "manufacturer": "GARMIN",
       "lapCount": 1,
+      "isAtpActivity": false,
       "waterEstimated": 671.0,
       "totalSets": 1,
       "activeSets": 1,
@@ -1972,6 +3103,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 33,
       "vigorousIntensityMinutes": 18,
       "differenceBodyBattery": -4,
@@ -1984,15 +3116,15 @@
       "endTimeGMT": "2026-07-20 19:33:07",
       "qualifyingDive": false,
       "activityUUID": "5b608f67-1b40-4846-a6f7-8d7d44c4bbf5",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23639494129,
@@ -2012,6 +3144,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 8509.2900390625,
       "duration": 2509.8779296875,
       "elapsedDuration": 2568.837890625,
@@ -2075,6 +3211,7 @@
       "userPro": false,
       "courseId": 489042239,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1784363865000,
       "sportTypeId": 1,
@@ -2094,6 +3231,8 @@
       "maxElevation": 1179.199951171875,
       "avgElevation": 1125.9768923330116,
       "maxDoubleCadence": 242.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -2103,6 +3242,7 @@
       "lapCount": 9,
       "endLatitude": 40.90006314218044,
       "endLongitude": -4.008763208985329,
+      "isAtpActivity": false,
       "waterEstimated": 696.0,
       "minRespirationRate": 28.479999542236328,
       "maxRespirationRate": 52.02000045776367,
@@ -2171,6 +3311,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 41,
       "avgGradeAdjustedSpeed": 3.4379999637603764,
@@ -2192,15 +3333,15 @@
       "endTimeGMT": "2026-07-18 09:20:33",
       "qualifyingDive": false,
       "activityUUID": "ca73e09b-8ae9-4864-905e-5e2d3bda2d7e",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23598664082,
@@ -2220,6 +3361,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 10508.5498046875,
       "duration": 3075.93798828125,
       "elapsedDuration": 3075.93798828125,
@@ -2282,6 +3427,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1784050657000,
       "sportTypeId": 1,
@@ -2301,6 +3447,8 @@
       "maxElevation": 596.0,
       "avgElevation": 581.9911543286331,
       "maxDoubleCadence": 178.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -2310,6 +3458,7 @@
       "lapCount": 11,
       "endLatitude": 40.3975263889879,
       "endLongitude": -3.6820634454488754,
+      "isAtpActivity": false,
       "waterEstimated": 854.0,
       "minRespirationRate": 21.65999984741211,
       "maxRespirationRate": 49.15999984741211,
@@ -2355,6 +3504,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 49,
       "avgGradeAdjustedSpeed": 3.427000045776367,
@@ -2377,15 +3527,15 @@
       "endTimeGMT": "2026-07-14 18:28:52",
       "qualifyingDive": false,
       "activityUUID": "eb255de5-dcce-4213-b466-4fa23f15fe5e",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23585715947,
@@ -2405,6 +3555,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 1260.0,
       "duration": 2123.2451171875,
       "elapsedDuration": 2178.4169921875,
@@ -2469,6 +3623,7 @@
         "factor": 100.0
       },
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1783966413000,
       "sportTypeId": 5,
@@ -2478,11 +3633,14 @@
       "avgStrokeDistance": 0.0,
       "avgStrokes": 11.5,
       "deviceId": 3457913740,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
       "manufacturer": "GARMIN",
       "lapCount": 4,
+      "isAtpActivity": false,
       "trainingEffectLabel": "AEROBIC_BASE",
       "activityTrainingLoad": 66.38491821289062,
       "minActivityLapDuration": 39.06399917602539,
@@ -2491,6 +3649,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 2,
       "vigorousIntensityMinutes": 33,
       "hasHeatMap": false,
@@ -2502,15 +3661,15 @@
       "endTimeGMT": "2026-07-13 18:49:51",
       "qualifyingDive": false,
       "activityUUID": "76d1afda-febc-42f9-8f0b-d02b9641510e",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23572756765,
@@ -2530,6 +3689,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 50241.66015625,
       "duration": 6722.740234375,
       "elapsedDuration": 7228.0888671875,
@@ -2589,6 +3752,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1783845389000,
       "sportTypeId": 2,
@@ -2598,6 +3762,8 @@
       "minElevation": 533.0,
       "maxElevation": 865.5999755859375,
       "avgElevation": 671.6684022793916,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -2607,6 +3773,7 @@
       "lapCount": 11,
       "endLatitude": 40.44785309582949,
       "endLongitude": -3.997380333021283,
+      "isAtpActivity": false,
       "waterEstimated": 1867.0,
       "minRespirationRate": 17.729999542236328,
       "maxRespirationRate": 47.72999954223633,
@@ -2619,6 +3786,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 24,
       "vigorousIntensityMinutes": 82,
       "differenceBodyBattery": -20,
@@ -2632,15 +3800,15 @@
       "endTimeGMT": "2026-07-12 10:36:57",
       "qualifyingDive": false,
       "activityUUID": "73e01671-acfb-49c0-b9d6-7d822632efa9",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23560317236,
@@ -2660,6 +3828,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 11014.599609375,
       "duration": 3722.06201171875,
       "elapsedDuration": 3738.365966796875,
@@ -2722,6 +3894,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1783758554000,
       "sportTypeId": 1,
@@ -2741,6 +3914,8 @@
       "maxElevation": 656.7999877929688,
       "avgElevation": 646.932993450708,
       "maxDoubleCadence": 174.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -2750,6 +3925,7 @@
       "lapCount": 12,
       "endLatitude": 40.4426113050431,
       "endLongitude": -3.995452579110861,
+      "isAtpActivity": false,
       "waterEstimated": 1033.0,
       "minRespirationRate": 14.579999923706055,
       "maxRespirationRate": 43.25,
@@ -2811,6 +3987,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 60,
       "avgGradeAdjustedSpeed": 2.970999956130981,
@@ -2833,15 +4010,15 @@
       "endTimeGMT": "2026-07-11 09:31:32",
       "qualifyingDive": false,
       "activityUUID": "38c6c6ca-5c70-4567-ada8-e2fa9f0bf5c6",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23525605393,
@@ -2861,6 +4038,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 8051.580078125,
       "duration": 2612.404052734375,
       "elapsedDuration": 2616.634033203125,
@@ -2923,6 +4104,7 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1783526075000,
       "sportTypeId": 1,
@@ -2942,6 +4124,8 @@
       "maxElevation": 602.4000244140625,
       "avgElevation": 584.9114091297752,
       "maxDoubleCadence": 188.0,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
@@ -2951,6 +4135,7 @@
       "lapCount": 9,
       "endLatitude": 40.39718055166304,
       "endLongitude": -3.68701689876616,
+      "isAtpActivity": false,
       "waterEstimated": 725.0,
       "minRespirationRate": 11.670000076293945,
       "maxRespirationRate": 57.33000183105469,
@@ -2996,6 +4181,7 @@
       ],
       "hasSplits": true,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 1,
       "vigorousIntensityMinutes": 42,
       "avgGradeAdjustedSpeed": 3.0880000591278076,
@@ -3017,15 +4203,15 @@
       "endTimeGMT": "2026-07-08 16:38:11",
       "qualifyingDive": false,
       "activityUUID": "a3d944d4-43b7-4437-bd71-f9d64193def6",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23512547203,
@@ -3045,6 +4231,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 0.0,
       "duration": 3366.881103515625,
       "elapsedDuration": 3366.881103515625,
@@ -3100,12 +4290,14 @@
       },
       "userPro": false,
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1783436852000,
       "sportTypeId": 10,
       "aerobicTrainingEffect": 2.5,
       "anaerobicTrainingEffect": 2.0,
       "deviceId": 3457913740,
+      "isElevationCorrected": false,
       "summarizedExerciseSets": [
         {
           "category": "ROW",
@@ -3116,11 +4308,13 @@
           "maxWeight": 0
         }
       ],
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
       "manufacturer": "GARMIN",
       "lapCount": 1,
+      "isAtpActivity": false,
       "waterEstimated": 935.0,
       "totalSets": 1,
       "activeSets": 1,
@@ -3133,6 +4327,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 26,
       "vigorousIntensityMinutes": 29,
       "differenceBodyBattery": -7,
@@ -3145,15 +4340,15 @@
       "endTimeGMT": "2026-07-07 16:03:38",
       "qualifyingDive": false,
       "activityUUID": "6d4769d5-1229-4c9b-aabe-045e17485ace",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "favorite": false,
+      "decoDive": false,
+      "parent": false
     },
     {
       "activityId": 23500731587,
@@ -3173,6 +4368,10 @@
         "typeKey": "uncategorized",
         "sortOrder": 10
       },
+      "isFavorite": false,
+      "isPR": false,
+      "isAutoCalcCalories": false,
+      "isParent": false,
       "distance": 1320.0,
       "duration": 2334.528076171875,
       "elapsedDuration": 2475.512939453125,
@@ -3237,6 +4436,7 @@
         "factor": 100.0
       },
       "hasVideo": false,
+      "isPurposeful": false,
       "timeZoneId": 124,
       "beginTimestamp": 1783353659000,
       "sportTypeId": 5,
@@ -3246,11 +4446,14 @@
       "avgStrokeDistance": 0.0,
       "avgStrokes": 11.699999809265137,
       "deviceId": 3457913740,
+      "isElevationCorrected": false,
+      "isDecoDive": false,
       "summarizedDiveInfo": {
         "summarizedDiveGases": []
       },
       "manufacturer": "GARMIN",
       "lapCount": 4,
+      "isAtpActivity": false,
       "trainingEffectLabel": "AEROBIC_BASE",
       "activityTrainingLoad": 80.271484375,
       "minActivityLapDuration": 80.76699829101562,
@@ -3259,6 +4462,7 @@
       "splitSummaries": [],
       "hasSplits": false,
       "hasIntensityIntervals": false,
+      "isManualActivity": false,
       "moderateIntensityMinutes": 11,
       "vigorousIntensityMinutes": 28,
       "hasHeatMap": false,
@@ -3270,146 +4474,15 @@
       "endTimeGMT": "2026-07-06 16:42:14",
       "qualifyingDive": false,
       "activityUUID": "64eebaca-c9f0-4a8c-92e0-8f59f1ecd5e2",
-      "parent": false,
-      "favorite": false,
-      "decoDive": false,
+      "autoCalcCalories": false,
+      "elevationCorrected": false,
+      "atpActivity": false,
       "pr": false,
       "purposeful": false,
       "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
-    },
-    {
-      "activityId": 23486120126,
-      "activityName": "Madrid Ciclismo en ruta",
-      "startTimeLocal": "2026-07-05 09:38:06",
-      "startTimeGMT": "2026-07-05 07:38:06",
-      "activityType": {
-        "typeId": 10,
-        "typeKey": "road_biking",
-        "parentTypeId": 2,
-        "isHidden": false,
-        "restricted": false,
-        "trimmable": true
-      },
-      "eventType": {
-        "typeId": 9,
-        "typeKey": "uncategorized",
-        "sortOrder": 10
-      },
-      "distance": 64424.30078125,
-      "duration": 8957.2578125,
-      "elapsedDuration": 10060.2216796875,
-      "movingDuration": 8941.525024414062,
-      "elevationGain": 856.7799999713898,
-      "elevationLoss": 588.5199999809265,
-      "averageSpeed": 7.191999912261964,
-      "maxSpeed": 17.32699966430664,
-      "startLatitude": 40.398343121632934,
-      "startLongitude": -3.686764519661665,
-      "hasPolyline": true,
-      "hasImages": false,
-      "ownerId": 110733870,
-      "ownerDisplayName": "6246cdac-120e-443b-a868-b47ca92dacf4",
-      "ownerFullName": "Marcos Arranz",
-      "ownerProfileImageUrlSmall": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/c42f60e1-f650-4c25-b31c-9866c35d6136-prth.png",
-      "ownerProfileImageUrlMedium": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/c42f60e1-f650-4c25-b31c-9866c35d6136-prfr.png",
-      "ownerProfileImageUrlLarge": "https://s3.amazonaws.com/garmin-connect-prod/profile_images/c42f60e1-f650-4c25-b31c-9866c35d6136-prof.png",
-      "calories": 1515.0,
-      "bmrCalories": 214.0,
-      "averageHR": 150.0,
-      "maxHR": 182.0,
-      "userRoles": [
-        "SCOPE_GOLF_API_READ",
-        "SCOPE_DI_OAUTH_2_DEVICE_REVOCATION_WRITE",
-        "SCOPE_DI_OAUTH_2_CREATE_DI_USER",
-        "SCOPE_ATP_READ",
-        "SCOPE_DIVE_API_WRITE",
-        "SCOPE_COMMUNITY_COURSE_ADMIN_READ",
-        "SCOPE_DIVE_API_READ",
-        "SCOPE_DT_ACTIVE_INTELLIGENCE_READ",
-        "SCOPE_DI_OAUTH_2_CLIENT_READ",
-        "SCOPE_CONNECT_WRITE",
-        "SCOPE_COMMUNITY_COURSE_WRITE",
-        "SCOPE_CONNECT_MCT_DAILY_LOG_READ",
-        "SCOPE_CONNECT_API_CREATE_UPDATE_USER",
-        "SCOPE_MESSAGE_GENERATION_READ",
-        "SCOPE_DI_OAUTH_2_CLIENT_REVOCATION_ADMIN",
-        "SCOPE_CONNECT_WEB_TEMPLATE_RENDER",
-        "SCOPE_ACTIVITY_DETECTION_READ",
-        "SCOPE_OMT_SUBSCRIPTION_ADMIN_READ",
-        "SCOPE_DI_OAUTH_2_MANAGED_STATUS_ADMIN_WRITE",
-        "SCOPE_CONNECT_NON_SOCIAL_SHARED_READ",
-        "SCOPE_CONNECT_READ",
-        "SCOPE_DI_OAUTH_2_PRERELEASE_PERMISSIONS_ADMIN_WRITE",
-        "SCOPE_DI_OAUTH_2_TOKEN_ADMIN",
-        "SCOPE_ATP_WRITE",
-        "ROLE_CONNECTUSER",
-        "ROLE_FITNESS_USER",
-        "ROLE_WELLNESS_USER",
-        "ROLE_OUTDOOR_USER",
-        "ROLE_GARMIN_USER"
-      ],
-      "privacy": {
-        "typeId": 3,
-        "typeKey": "subscribers"
-      },
-      "userPro": false,
-      "courseId": 471210289,
-      "hasVideo": false,
-      "timeZoneId": 124,
-      "beginTimestamp": 1783237086000,
-      "sportTypeId": 2,
-      "aerobicTrainingEffect": 4.199999809265137,
-      "anaerobicTrainingEffect": 2.5,
-      "deviceId": 3457913740,
-      "minElevation": 570.0,
-      "maxElevation": 909.2000122070312,
-      "avgElevation": 711.483733071245,
-      "summarizedDiveInfo": {
-        "summarizedDiveGases": []
-      },
-      "maxVerticalSpeed": 2.0,
-      "manufacturer": "GARMIN",
-      "locationName": "Madrid",
-      "lapCount": 13,
-      "endLatitude": 40.593108627945185,
-      "endLongitude": -4.041588669642806,
-      "waterEstimated": 2487.0,
-      "minRespirationRate": 19.739999771118164,
-      "maxRespirationRate": 47.15999984741211,
-      "avgRespirationRate": 34.119998931884766,
-      "trainingEffectLabel": "AEROBIC_BASE",
-      "activityTrainingLoad": 216.43597412109375,
-      "minActivityLapDuration": 466.8810119628906,
-      "aerobicTrainingEffectMessage": "HIGHLY_IMPROVING_AEROBIC_ENDURANCE_10",
-      "anaerobicTrainingEffectMessage": "MAINTAINING_ANAEROBIC_BASE_1",
-      "splitSummaries": [],
-      "hasSplits": false,
-      "hasIntensityIntervals": false,
-      "moderateIntensityMinutes": 42,
-      "vigorousIntensityMinutes": 104,
-      "differenceBodyBattery": -18,
-      "hasHeatMap": false,
-      "fastestSplit_40000": 5808.158203125,
-      "hrTimeInZone_1": 111.982,
-      "hrTimeInZone_2": 1625.94,
-      "hrTimeInZone_3": 4694.562,
-      "hrTimeInZone_4": 2505.687,
-      "hrTimeInZone_5": 18.004,
-      "endTimeGMT": "2026-07-05 10:25:46",
-      "qualifyingDive": false,
-      "activityUUID": "91be8f9f-79c8-4a65-a632-8d743ebacd90",
-      "parent": false,
       "favorite": false,
       "decoDive": false,
-      "pr": false,
-      "purposeful": false,
-      "manualActivity": false,
-      "autoCalcCalories": false,
-      "elevationCorrected": false,
-      "atpActivity": false
+      "parent": false
     }
   ],
   "carga_entrenamiento": {
@@ -3429,7 +4502,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-08-05",
+    "calendarDate": "2026-08-06",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -3499,8 +4572,8 @@
     "latestSpo2ReadingTimeLocal": null,
     "averageMonitoringEnvironmentAltitude": null,
     "restingCaloriesFromActivity": null,
-    "from": 1785888000000,
-    "until": 1785974399999,
+    "from": 1785974400000,
+    "until": 1786060799999,
     "weight": null,
     "bmi": null,
     "bodyFat": null,
@@ -3522,7 +4595,7 @@
   "vo2max": [],
   "hidratacion": {
     "userId": 110733870,
-    "calendarDate": "2026-08-05",
+    "calendarDate": "2026-08-06",
     "valueInML": null,
     "goalInML": 2800.0,
     "dailyAverageinML": null,
@@ -3534,8 +4607,8 @@
   "peso": {
     "dailyWeightSummaries": [],
     "totalAverage": {
-      "from": 1785888000000,
-      "until": 1785974399999,
+      "from": 1785974400000,
+      "until": 1786060799999,
       "weight": null,
       "bmi": null,
       "bodyFat": null,
