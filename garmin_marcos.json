@@ -20,7 +20,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-08-19",
+    "calendarDate": "2026-08-20",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -93,7 +93,7 @@
   },
   "body_battery": [
     {
-      "date": "2026-08-19",
+      "date": "2026-08-20",
       "charged": null,
       "drained": null,
       "startTimestampGMT": null,
@@ -102,27 +102,27 @@
       "endTimestampLocal": null,
       "bodyBatteryValuesArray": [
         [
-          1787097600001,
+          1787184000001,
           null
         ],
         [
-          1787097600002,
+          1787184000002,
           null
         ],
         [
-          1787097600003,
+          1787184000003,
           null
         ],
         [
-          1787097600004,
+          1787184000004,
           null
         ],
         [
-          1787097600005,
+          1787184000005,
           null
         ],
         [
-          1787097600006,
+          1787184000006,
           null
         ]
       ],
@@ -134,7 +134,7 @@
     "dailySleepDTO": {
       "id": null,
       "userProfilePK": 110733870,
-      "calendarDate": "2026-08-18",
+      "calendarDate": "2026-08-19",
       "sleepTimeSeconds": null,
       "napTimeSeconds": null,
       "sleepWindowConfirmed": null,
@@ -161,8 +161,8 @@
   },
   "fc_reposo": {
     "userProfileId": 110733870,
-    "statisticsStartDate": "2026-08-19",
-    "statisticsEndDate": "2026-08-19",
+    "statisticsStartDate": "2026-08-20",
+    "statisticsEndDate": "2026-08-20",
     "allMetrics": {
       "metricsMap": {}
     },
@@ -170,7 +170,7 @@
   },
   "estres": {
     "userProfilePK": 110733870,
-    "calendarDate": "2026-08-19",
+    "calendarDate": "2026-08-20",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -184,7 +184,7 @@
   },
   "spo2": {
     "userProfilePK": 110733870,
-    "calendarDate": "2026-08-19",
+    "calendarDate": "2026-08-20",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -212,7 +212,7 @@
   },
   "respiracion": {
     "userProfilePK": 110733870,
-    "calendarDate": "2026-08-19",
+    "calendarDate": "2026-08-20",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -3729,7 +3729,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-08-19",
+    "calendarDate": "2026-08-20",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -3799,8 +3799,8 @@
     "latestSpo2ReadingTimeLocal": null,
     "averageMonitoringEnvironmentAltitude": null,
     "restingCaloriesFromActivity": null,
-    "from": 1787097600000,
-    "until": 1787183999999,
+    "from": 1787184000000,
+    "until": 1787270399999,
     "weight": null,
     "bmi": null,
     "bodyFat": null,
@@ -3809,8 +3809,7 @@
     "muscleMass": null,
     "physiqueRating": null,
     "visceralFat": null,
-    "metabolicAge": null,
-    "trend": null
+    "metabolicAge": null
   },
   "estado_entrenamiento": {
     "userId": 110733870,
@@ -3822,7 +3821,7 @@
   "vo2max": [],
   "hidratacion": {
     "userId": 110733870,
-    "calendarDate": "2026-08-19",
+    "calendarDate": "2026-08-20",
     "valueInML": null,
     "goalInML": 2800.0,
     "dailyAverageinML": null,
@@ -3834,8 +3833,8 @@
   "peso": {
     "dailyWeightSummaries": [],
     "totalAverage": {
-      "from": 1787097600000,
-      "until": 1787183999999,
+      "from": 1787184000000,
+      "until": 1787270399999,
       "weight": null,
       "bmi": null,
       "bodyFat": null,
@@ -3844,8 +3843,7 @@
       "muscleMass": null,
       "physiqueRating": null,
       "visceralFat": null,
-      "metabolicAge": null,
-      "trend": null
+      "metabolicAge": null
     },
     "previousDateWeight": {
       "samplePk": null,
@@ -3862,8 +3860,7 @@
       "metabolicAge": null,
       "sourceType": null,
       "timestampGMT": null,
-      "weightDelta": null,
-      "trend": null
+      "weightDelta": null
     },
     "nextDateWeight": {
       "samplePk": null,
@@ -3880,8 +3877,7 @@
       "metabolicAge": null,
       "sourceType": null,
       "timestampGMT": null,
-      "weightDelta": null,
-      "trend": null
+      "weightDelta": null
     }
   }
 }
