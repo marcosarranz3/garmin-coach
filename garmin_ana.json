@@ -20,7 +20,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-10-02",
+    "calendarDate": "2026-10-03",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -93,7 +93,7 @@
   },
   "body_battery": [
     {
-      "date": "2026-10-02",
+      "date": "2026-10-03",
       "charged": null,
       "drained": null,
       "startTimestampGMT": null,
@@ -102,27 +102,27 @@
       "endTimestampLocal": null,
       "bodyBatteryValuesArray": [
         [
-          1790899200001,
+          1790985600001,
           null
         ],
         [
-          1790899200002,
+          1790985600002,
           null
         ],
         [
-          1790899200003,
+          1790985600003,
           null
         ],
         [
-          1790899200004,
+          1790985600004,
           null
         ],
         [
-          1790899200005,
+          1790985600005,
           null
         ],
         [
-          1790899200006,
+          1790985600006,
           null
         ]
       ],
@@ -134,7 +134,7 @@
     "dailySleepDTO": {
       "id": null,
       "userProfilePK": 100899315,
-      "calendarDate": "2026-10-01",
+      "calendarDate": "2026-10-02",
       "sleepTimeSeconds": null,
       "napTimeSeconds": null,
       "sleepWindowConfirmed": null,
@@ -161,8 +161,8 @@
   },
   "fc_reposo": {
     "userProfileId": 100899315,
-    "statisticsStartDate": "2026-10-02",
-    "statisticsEndDate": "2026-10-02",
+    "statisticsStartDate": "2026-10-03",
+    "statisticsEndDate": "2026-10-03",
     "allMetrics": {
       "metricsMap": {}
     },
@@ -170,7 +170,7 @@
   },
   "estres": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-10-02",
+    "calendarDate": "2026-10-03",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -184,7 +184,7 @@
   },
   "spo2": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-10-02",
+    "calendarDate": "2026-10-03",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -212,7 +212,7 @@
   },
   "respiracion": {
     "userProfilePK": 100899315,
-    "calendarDate": "2026-10-02",
+    "calendarDate": "2026-10-03",
     "startTimestampGMT": null,
     "endTimestampGMT": null,
     "startTimestampLocal": null,
@@ -3382,7 +3382,7 @@
     "wellnessActiveKilocalories": null,
     "netRemainingKilocalories": 0.0,
     "userDailySummaryId": null,
-    "calendarDate": "2026-10-02",
+    "calendarDate": "2026-10-03",
     "rule": null,
     "uuid": null,
     "dailyStepGoal": null,
@@ -3452,8 +3452,8 @@
     "latestSpo2ReadingTimeLocal": null,
     "averageMonitoringEnvironmentAltitude": null,
     "restingCaloriesFromActivity": null,
-    "from": 1790899200000,
-    "until": 1790985599999,
+    "from": 1790985600000,
+    "until": 1791071999999,
     "weight": null,
     "bmi": null,
     "bodyFat": null,
@@ -3474,7 +3474,7 @@
   "vo2max": [],
   "hidratacion": {
     "userId": 100899315,
-    "calendarDate": "2026-10-02",
+    "calendarDate": "2026-10-03",
     "valueInML": null,
     "goalInML": 2129.292,
     "dailyAverageinML": null,
@@ -3486,8 +3486,8 @@
   "peso": {
     "dailyWeightSummaries": [],
     "totalAverage": {
-      "from": 1790899200000,
-      "until": 1790985599999,
+      "from": 1790985600000,
+      "until": 1791071999999,
       "weight": null,
       "bmi": null,
       "bodyFat": null,
