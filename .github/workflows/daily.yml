@@ -3,7 +3,7 @@ name: Coach Garmin Diario
 on:
   schedule:
     - cron: '0 8 * * *'   # Marcos: 8h UTC = 10h Madrid
-    - cron: '0 7 * * *'   # Ana: 7h UTC = 9h Madrid
+    
   workflow_dispatch:
 
 jobs:
